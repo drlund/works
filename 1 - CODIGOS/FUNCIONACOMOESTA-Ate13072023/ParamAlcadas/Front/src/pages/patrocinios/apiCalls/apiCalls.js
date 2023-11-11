@@ -1,0 +1,21 @@
+import { FETCH_METHODS, fetch } from 'services/apis/GenericFetch';
+
+export const getSolicitacoes = () => fetch(FETCH_METHODS.GET, '/patrocinios/solicitacoes/');
+export const getOpcoesFormulario = (id) => fetch(FETCH_METHODS.GET, '/patrocinios/getOpcoesFormGestao/', { id });
+export const gravarGestao = (dataGestao) => fetch(FETCH_METHODS.POST, '/patrocinios/gravarGestao/', { dataGestao });
+export const gravarOrcamento = (dataOrcamento) => fetch(FETCH_METHODS.POST, '/patrocinios/gravarOrcamento/', { dataOrcamento });
+export const gravarProvisao = (dataProvisao) => fetch(FETCH_METHODS.POST, '/patrocinios/gravarProvisao/', { dataProvisao });
+export const gravarPagamento = (dataPagamento) => fetch(FETCH_METHODS.POST, '/patrocinios/gravarPagamento/', { dataPagamento });
+export const getOrcamento = (id) => fetch(FETCH_METHODS.GET, '/patrocinios/getOrcamento/', { id });
+export const getOrcamentoById = (id) => fetch(FETCH_METHODS.GET, '/patrocinios/getOrcamentoById/', { id });
+export const getPagamentos = (id) => fetch(FETCH_METHODS.GET, '/patrocinios/getPagamentos/', { id });
+export const getProjetos = (id) => fetch(FETCH_METHODS.GET, '/patrocinios/getProjetos/', { id });
+export const getProvisao = (id) => fetch(FETCH_METHODS.GET, '/patrocinios/getProvisao/', { id });
+export const getGestaoTotal = (idSolicitacao) => fetch(FETCH_METHODS.GET, '/patrocinios/getGestaoTotal', { idSolicitacao });
+export const patchProvisao = (dataProvisao) => fetch(FETCH_METHODS.PATCH, '/patrocinios/patchProvisao/', dataProvisao);
+export const patchPagamento = (dataPagamento) => fetch(FETCH_METHODS.PATCH, '/patrocinios/patchPagamento/', dataPagamento);
+export const patchOrcamento = (dataOrcamento) => fetch(FETCH_METHODS.PATCH, '/patrocinios/patchOrcamento/', dataOrcamento);
+export const patchEditaGestao = (dataGestao) => fetch(FETCH_METHODS.PATCH, '/patrocinios/patchEditaGestao/', dataGestao);
+export const deleteProvisao = (dataProvisao) => fetch(FETCH_METHODS.PATCH, '/patrocinios/deleteProvisao/', dataProvisao);
+export const deletePagamento = (dataPagamento) => fetch(FETCH_METHODS.PATCH, '/patrocinios/deletePagamento/', dataPagamento);
+export const deleteOrcamento = (dataOrcamento) => fetch(FETCH_METHODS.PATCH, '/patrocinios/deleteOrcamento/', dataOrcamento);

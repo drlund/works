@@ -1,0 +1,33 @@
+.BrainhubCarousel__arrows {
+  padding: 10px;
+}
+
+.BrainhubCarousel__arrows span {
+  padding: 3px;
+}
+
+.BrainhubCarousel__arrows:not(:disabled) span {
+  background-color: #1890ff;
+}
+
+.BrainhubCarousel__arrows:hover span {
+  padding: 3px;
+}
+
+.BrainhubCarousel__arrows:hover:not(:disabled) span {
+  background-color: #1890ff;
+}
+
+.BrainhubCarousel__track{
+  min-width: 204px !important;
+}
+
+.BrainhubCarouselItem{
+  min-width: 204px !important;
+} 
+
+
+.BrainhubCarousel__arrows:enabled,
+.BrainhubCarousel__arrows:hover:enabled {
+  background-color: #1890ff;
+}

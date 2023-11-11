@@ -1,0 +1,66 @@
+.bbAzul {
+  color: #002D4B;
+}
+
+.bbBGAzul {
+  background-color: #002D4B;
+  border-color: #002D4B;
+}
+
+.bbAmarelo {
+  color: #FCFC30;
+}
+
+.bbCinzaClaro {
+  color: #AFAFAF;
+}
+
+.bbCinzaEscuro {
+  color: #69696E;
+}
+
+.bbBranco {
+  color: #FFFFFF;
+}
+
+.bbVerdeEscuro {
+  color: #5AAAA0;
+}
+
+.bbRoxoEscuro {
+  color: #9187AF;
+}
+
+.vermelho {
+  color: red !important;
+}
+
+.containerBotoesAcao {
+  display: inline-flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  min-width: 100%;
+}
+
+.containerMsgAlerta {
+  flex-basis: 95%;
+  text-align: center;
+}
+
+.labelFiltro {
+  display: block;
+  flex: 1 1 auto;
+  text-align: end;
+  margin: auto;
+}
+
+.statusContent {
+  margin: auto;
+  flex: 1 1 40%;
+}
+
+.dateContent {
+  margin: auto;
+  flex: 1 1 auto;
+  text-align: start;
+}

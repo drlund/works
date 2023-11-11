@@ -1,0 +1,113 @@
+# GerenciarController.getPrefixosAcessoGerenciar
+# no params
+GET http://localhost:3333/procuracoes/gerenciar/acessos
+
+# Retorna uma lista de prefixos
+# [
+#   "9009",
+#   "8380",
+#   "8489",
+#   ...
+# ]
+
+###
+
+# GerenciarController.postManifesto
+# form: idProcuracao, cartorioId, custoManifesto, superCusto, prefixoCusto, dataManifesto, arquivoProcuracao (file)
+# Retorna: [1/0 - se sucesso ou falha, histórico do documento, evento de procuracao]
+POST http://localhost:3333/procuracoes/gerenciar/manifesto
+Content-Type: multipart/form-data; boundary=123
+
+--123
+Content-Disposition: form-data; name="idProcuracao"
+
+1330
+--123
+Content-Disposition: form-data; name="cartorioId"
+
+4
+--123
+Content-Disposition: form-data; name="custoManifesto"
+
+10.5
+--123
+Content-Disposition: form-data; name="superCusto"
+
+1
+--123
+Content-Disposition: form-data; name="prefixoCusto"
+
+9009
+--123
+Content-Disposition: form-data; name="dataManifesto"
+
+2023-06-27T14:03:09.596Z
+--123
+Content-Disposition: form-data; name="arquivoProcuracao"; filename="mock.pdf"
+Content-Type: application/pdf
+
+./__mocks__/mock.pdf
+--123--
+
+###
+
+# GerenciarController.postCopiaAutenticada
+# body: idProcuracao, cartorioId, custo, prefixoCusto, dataEmissao, superCusto
+# Retorna: evento de procuracao salvo
+POST http://localhost:3333/procuracoes/gerenciar/copia-autenticada
+content-type: application/json
+
+{
+  "idProcuracao":1330,
+  "cartorioId":4,
+  "custo":5.41,
+  "prefixoCusto":"9009",
+  "superCusto":1,
+  "dataEmissao":"{{$datetime iso8601}}"
+}
+
+###
+
+# GerenciarController.postRevogacao
+# form: idProcuracao, cartorioId, custo, superCusto, prefixoCusto, dataRevogacao, arquivoProcuracao (file)
+# retorna: [
+#  nr updates de inativacao abaixo,
+#  1/0 se atualizou procuracao revogada,
+#  historico do documento,
+#  evento de procuracao,
+#]
+POST http://localhost:3333/procuracoes/gerenciar/revogacao
+Content-Type: multipart/form-data; boundary=123
+
+--123
+Content-Disposition: form-data; name="idProcuracao"
+
+1322
+--123
+Content-Disposition: form-data; name="cartorioId"
+
+4
+--123
+Content-Disposition: form-data; name="custo"
+
+33.3
+--123
+Content-Disposition: form-data; name="superCusto"
+
+1
+--123
+Content-Disposition: form-data; name="prefixoCusto"
+
+9009
+--123
+Content-Disposition: form-data; name="dataRevogacao"
+
+{{$datetime iso8601}}
+--123
+Content-Disposition: form-data; name="arquivoProcuracao"; filename="mock.pdf"
+Content-Type: application/pdf
+
+./__mocks__/mock.pdf
+--123--
+
+###

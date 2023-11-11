@@ -1,0 +1,7 @@
+.registro-ativo {
+  background: #b7b7bd;
+}
+
+.acoes-lista-registro > .anticon-edit {
+  color:rgba(0, 0, 0, 0.65);
+}

@@ -1,0 +1,26 @@
+.arquivoWrapper {
+  margin: 10px 0;
+  padding: 10px 5px;
+  width: 30%;
+
+  & > .link {
+    cursor: pointer;
+    color: #3894e0;
+    &:hover {
+      color: #2975b3;
+    }
+  }
+}
+
+.wrapperMsgConfirmacao{
+  display: flex;
+  align-items: center;
+  & svg{
+    margin: 0 10px;
+  }
+}
+
+.wrapperCampoAnexo {
+  display: flex;
+  align-items: flex-start;
+}

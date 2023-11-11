@@ -1,0 +1,17 @@
+
+.ant-table-content{
+  min-height: 282px;
+}
+
+.elogio-card {
+  min-height:530px
+}
+
+.ant-form-item {
+  margin-bottom: 0px;
+  padding-bottom: 0 !important;
+}
+
+.ant-card-wider-padding .ant-card-body {
+  padding: 10px 32px;
+}

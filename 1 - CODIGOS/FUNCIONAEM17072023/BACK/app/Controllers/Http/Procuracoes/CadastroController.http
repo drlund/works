@@ -1,0 +1,535 @@
+# CadastroController
+
+# .downloadArquivo
+# slug: docName
+GET http://localhost:3333/procuracoes/cadastro/download-arquivo/0a523816-4bee-48d1-b8dc-d6f96437d90b.pdf
+
+# documento no storage
+#
+# pode retornar 404 - Arquivo não encontrado.
+
+###
+
+# .getListaCartorios
+# sem parametros
+GET http://localhost:3333/procuracoes/cadastro/lista-cartorios
+
+# array de cartorios
+# [
+#   {
+#     "id": 1,
+#     "cnpj": "00.000.000/0000-00",
+#     "nome": "1º Tabelionato da Vila Bonita",
+#     "cep": "00000-00",
+#     "endereco": "Beltrano da Siva",
+#     "complemento": "3º Andar",
+#     "bairro": "Verdes Campos",
+#     "municipio": "Cidade",
+#     "uf": "DF",
+#     "createdAt": "24/03/2022 15:55",
+#     "updatedAt": "24/03/2022 15:55",
+#     "ativo": 1
+#   }
+# ]
+
+###
+
+# .getListaSubsidiarias
+# sem parametros
+GET http://localhost:3333/procuracoes/cadastro/lista-subsidiarias
+
+# array de subsidiarias
+# [
+#   {
+#     "id": 1,
+#     "cnpj": "31591399000156",
+#     "nomeReduzido": "BB CARTOES",
+#     "nome": "BB ADMINISTRADORA DE CARTOES DE CREDITO S.A.",
+#     "cep": "70040912",
+#     "endereco": "SETOR DE AUTARQUIAS NORTE QUADRA 5 LOTE B",
+#     "complemento": "TORRE I - 2º ANDAR EDIFICIO BANCO DO BRASIL",
+#     "bairro": "ASA NORTE",
+#     "municipio": "BRASILIA",
+#     "uf": "DF",
+#     "createdAt": "08/04/2022 14:30",
+#     "updatedAt": "08/04/2022 14:31",
+#     "ativo": 1
+#   }
+# ]
+
+###
+
+# .pesquisarOutorgado
+# params: termoPesquisa, idFluxo
+# exemplo de funci com fluxo correto
+GET http://localhost:3333/procuracoes/cadastro/pesquisar-outorgado?termoPesquisa=F8718628&idFluxo=f8dd7ebd-8c5c-4f7e-92c0-4a9ac7e52ba4
+
+# exemplo de matriculas / fluxos:
+# atualizar em caso de erro!
+#
+# 1GUN	F1705347 33c79330-1c11-4021-bf7c-d22e70359438
+# 2GUN	F0743483 6e7d44f6-3c9f-4efe-87aa-6307af65df17
+# 2GUN	F0743483 89998559-8d58-4031-a708-8386379ba8bf
+# 3GUN	F0099222 a6c2cb94-8c1a-4d5c-8208-b9e49f53bd21
+# 3GUN	F0099222 f2a79756-0a31-44af-aa3a-cbcfcd5d03ef
+# 3GUN	F0099222 b5dfd889-9196-4199-9706-2da7900c98b4
+# 3GUN	F0099222 7c87cabf-6f73-4a63-aae1-8619417c52c6
+#
+# 1GUT	F8718628 f8dd7ebd-8c5c-4f7e-92c0-4a9ac7e52ba4
+# 2GUT	F2326178 9bca0a03-9b9e-454c-a6a1-b963942fc25c
+# 2GUT	F2326178 9b27efa1-99f3-4787-b6c8-ae018721c02c
+# 2GUT	F2326178 183e8ee8-29bf-44b9-8b2a-06c0b20020a9
+# 2GUT	F2326178 e9b1d2c5-ace3-4349-ad2d-6c6f757d49da
+#
+# exemplo de retorno:
+# {
+#   "matricula": "F8718628",
+#   "nome": "ROGERIO NATAL CERRI",
+#   "dataNasc": "1979-07-09T03:00:00.000Z",
+#   "dataPosse": "1998-12-14T02:00:00.000Z",
+#   "grauInstr": 8,
+#   "codFuncLotacao": "13022",
+#   "descFuncLotacao": "SUPERINTENDENTE UT",
+#   "refOrganizacionalFuncLotacao": "1GUT",
+#   "comissao": "13022",
+#   "descCargo": "SUPERINTENDENTE UT",
+#   "codSituacao": 100,
+#   "dataSituacao": "2000-06-12T03:00:00.000Z",
+#   "agenciaLocalizacao": "9009",
+#   "prefixoLotacao": "9009",
+#   "codUorTrabalho": "000456778",
+#   "nomeUorTrabalho": "SUPER ADM-DF",
+#   "codUorGrupo": "000456778",
+#   "nomeUorGrupo": "SUPER ADM",
+#   "email": "rogeriocerri@bb.com.br",
+#   "dddCelular": 61,
+#   "foneCelular": 995545970,
+#   "sexo": 1,
+#   "estCivil": "2",
+#   "nomeGuerra": "ROGERIO CERRI",
+#   "rg": "29135015X - SSP - SP",
+#   "cpf": "21449814859",
+#   "dependencia": {
+#     "subordinada": "00",
+#     "uor": "000456778",
+#     "gerev": "0000",
+#     "super": "9009",
+#     "diretoria": "9010",
+#     "nome": "SUPER ADM",
+#     "prefixo": "9009",
+#     "uf": "DF",
+#     "municipio": "BRASILIA"
+#   }
+# }
+#
+###
+
+# .pesquisarOutorgado
+# params: termoPesquisa, idFluxo
+# exemplo de funci não encontrado
+GET http://localhost:3333/procuracoes/cadastro/pesquisar-outorgado?termoPesquisa=F9999999&idFluxo=f8dd7ebd-8c5c-4f7e-92c0-4a9ac7e52ba4
+
+# exemplo de retorno:
+# Funci não encontrado.
+###
+
+# .pesquisarOutorgado
+# params: termoPesquisa, idFluxo
+# exemplo de funci sem função correta
+GET http://localhost:3333/procuracoes/cadastro/pesquisar-outorgado?termoPesquisa=F1690528&idFluxo=f8dd7ebd-8c5c-4f7e-92c0-4a9ac7e52ba4
+
+# exemplo de retorno:
+# Função do outorgado deve ser uma das seguintes: 1GUT
+###
+
+# .pesquisarOutorgado
+# params: termoPesquisa, idFluxo
+# exemplo de fluxo invalido
+GET http://localhost:3333/procuracoes/cadastro/pesquisar-outorgado?termoPesquisa=F1690528&idFluxo=invalida
+
+# exemplo de retorno:
+# Fluxo não encontrado.
+###
+
+# .pesquisarPoderesOutorgante
+# slug: matricula
+GET http://localhost:3333/procuracoes/cadastro/pesquisar-poderes-outorgante/F8718628
+
+# array de poderes / array vazia
+# exemplo de formato:
+# [
+#   "idProcuracao": 1,
+#   "idSubsidiaria": 1,
+#   "direto": 0,
+#   "procuracao": {Objeto Procuracao},
+#   "dadosSubsidiaria": {Objeto Subsidiaria},
+# ]
+#
+# exemplo de formato:
+# [
+#   {
+#     "idProcuracao": 5,
+#     "idSubsidiaria": 1,
+#     "direto": 0,
+#     "procuracao": {
+#       "id": 5,
+#       "idCartorio": 1,
+#       "idOutorgadoSnapshot": 5,
+#       "folha": "45",
+#       "livro": "42",
+#       "dataEmissao": "2022-05-23T03:00:00.000Z",
+#       "dataVencimento": null,
+#       "urlDocumento": "teste5",
+#       "createdAt": "23/05/2022 13:17",
+#       "updatedAt": "20/07/2022 15:01",
+#       "ativo": 1,
+#       "outorgadoSnapshot": {
+#         "id": 5,
+#         "matricula": "f1690528",
+#         "cpf": null,
+#         "rg": null,
+#         "nome": "Bruno Noriller",
+#         "estadoCivil": null,
+#         "cargoCodigo": null,
+#         "cargoNome": null,
+#         "lotacaoCodigo": null,
+#         "lotacaoNome": null,
+#         "lotacaoMunicipio": null,
+#         "lotacaoUf": null,
+#         "createdAt": null,
+#         "updatedAt": null
+#       },
+#       "cartorio": {
+#         "id": 1,
+#         "cnpj": "00.000.000/0000-00",
+#         "nome": "1º Tabelionato da Vila Bonita",
+#         "cep": "00000-00",
+#         "endereco": "Beltrano da Siva",
+#         "complemento": "3º Andar",
+#         "bairro": "Verdes Campos",
+#         "municipio": "Cidade",
+#         "uf": "DF",
+#         "createdAt": "24/03/2022 15:55",
+#         "updatedAt": "24/03/2022 15:55",
+#         "ativo": 1
+#       }
+#     },
+#     "dadosSubsidiaria": {
+#       "id": 1,
+#       "cnpj": "31591399000156",
+#       "nomeReduzido": "BB CARTOES",
+#       "nome": "BB ADMINISTRADORA DE CARTOES DE CREDITO S.A.",
+#       "cep": "70040912",
+#       "endereco": "SETOR DE AUTARQUIAS NORTE QUADRA 5 LOTE B",
+#       "complemento": "TORRE I - 2º ANDAR EDIFICIO BANCO DO BRASIL",
+#       "bairro": "ASA NORTE",
+#       "municipio": "BRASILIA",
+#       "uf": "DF",
+#       "createdAt": "08/04/2022 14:30",
+#       "updatedAt": "08/04/2022 14:31",
+#       "ativo": 1
+#     }
+#   },
+#   {
+#     "idProcuracao": 5,
+#     "idSubsidiaria": 2,
+#     "direto": 0,
+#     "procuracao": {
+#       "id": 5,
+#       "idCartorio": 1,
+#       "idOutorgadoSnapshot": 5,
+#       "folha": "45",
+#       "livro": "42",
+#       "dataEmissao": "2022-05-23T03:00:00.000Z",
+#       "dataVencimento": null,
+#       "urlDocumento": "teste5",
+#       "createdAt": "23/05/2022 13:17",
+#       "updatedAt": "20/07/2022 15:01",
+#       "ativo": 1,
+#       "outorgadoSnapshot": {
+#         "id": 5,
+#         "matricula": "f1690528",
+#         "cpf": null,
+#         "rg": null,
+#         "nome": "Bruno Noriller",
+#         "estadoCivil": null,
+#         "cargoCodigo": null,
+#         "cargoNome": null,
+#         "lotacaoCodigo": null,
+#         "lotacaoNome": null,
+#         "lotacaoMunicipio": null,
+#         "lotacaoUf": null,
+#         "createdAt": null,
+#         "updatedAt": null
+#       },
+#       "cartorio": {
+#         "id": 1,
+#         "cnpj": "00.000.000/0000-00",
+#         "nome": "1º Tabelionato da Vila Bonita",
+#         "cep": "00000-00",
+#         "endereco": "Beltrano da Siva",
+#         "complemento": "3º Andar",
+#         "bairro": "Verdes Campos",
+#         "municipio": "Cidade",
+#         "uf": "DF",
+#         "createdAt": "24/03/2022 15:55",
+#         "updatedAt": "24/03/2022 15:55",
+#         "ativo": 1
+#       }
+#     },
+#     "dadosSubsidiaria": {
+#       "id": 2,
+#       "cnpj": "24933830000130",
+#       "nomeReduzido": "BB INVESTIMENTO",
+#       "nome": "BB BANCO DE INVESTIMENTO S.A.",
+#       "cep": "20031923",
+#       "endereco": "RUA SENADOR DANTAS 105",
+#       "complemento": "SALA 3701",
+#       "bairro": "CENTRO",
+#       "municipio": "RIO DE JANEIRO",
+#       "uf": "RJ",
+#       "createdAt": "08/04/2022 14:30",
+#       "updatedAt": "08/04/2022 14:31",
+#       "ativo": 1
+#     }
+#   },
+#   {
+#     "idProcuracao": 5,
+#     "idSubsidiaria": 3,
+#     "direto": 0,
+#     "procuracao": {
+#       "id": 5,
+#       "idCartorio": 1,
+#       "idOutorgadoSnapshot": 5,
+#       "folha": "45",
+#       "livro": "42",
+#       "dataEmissao": "2022-05-23T03:00:00.000Z",
+#       "dataVencimento": null,
+#       "urlDocumento": "teste5",
+#       "createdAt": "23/05/2022 13:17",
+#       "updatedAt": "20/07/2022 15:01",
+#       "ativo": 1,
+#       "outorgadoSnapshot": {
+#         "id": 5,
+#         "matricula": "f1690528",
+#         "cpf": null,
+#         "rg": null,
+#         "nome": "Bruno Noriller",
+#         "estadoCivil": null,
+#         "cargoCodigo": null,
+#         "cargoNome": null,
+#         "lotacaoCodigo": null,
+#         "lotacaoNome": null,
+#         "lotacaoMunicipio": null,
+#         "lotacaoUf": null,
+#         "createdAt": null,
+#         "updatedAt": null
+#       },
+#       "cartorio": {
+#         "id": 1,
+#         "cnpj": "00.000.000/0000-00",
+#         "nome": "1º Tabelionato da Vila Bonita",
+#         "cep": "00000-00",
+#         "endereco": "Beltrano da Siva",
+#         "complemento": "3º Andar",
+#         "bairro": "Verdes Campos",
+#         "municipio": "Cidade",
+#         "uf": "DF",
+#         "createdAt": "24/03/2022 15:55",
+#         "updatedAt": "24/03/2022 15:55",
+#         "ativo": 1
+#       }
+#     },
+#     "dadosSubsidiaria": {
+#       "id": 3,
+#       "cnpj": "04740876000125",
+#       "nomeReduzido": "CBSS",
+#       "nome": "COMPANHIA BRASILEIRA DE SOLUCOES E SERVICOS",
+#       "cep": "06455030",
+#       "endereco": "ALAMEDA XINGU 512",
+#       "complemento": "ANDAR 3 E 4 EDIFICIO CONDOMINIO EVOLUTION CORPORATE",
+#       "bairro": "ALPHAVILLE",
+#       "municipio": "BARUERI",
+#       "uf": "SP",
+#       "createdAt": "08/04/2022 14:30",
+#       "updatedAt": "08/04/2022 14:31",
+#       "ativo": 1
+#     }
+#   }
+# ]
+
+###
+
+# .cadastrarCartorio
+# body: nome, cnpj, endereco, complemento, bairro, cep, municipio, uf
+POST http://localhost:3333/procuracoes/cadastro/cadastrar-cartorio
+content-type: application/json
+
+{
+  "nome": "Nome Cartorio",
+  "cnpj": "00.000.000/0000-00",
+  "endereco": "Rua do Cartorio",
+  "complemento": "Cartorio",
+  "bairro": "Cartorio",
+  "cep": "00000-000",
+  "municipio": "Cartorio",
+  "uf": "DF"
+}
+
+###
+
+# .cadastrarProcuracao
+# multipart form data: funcaoOutorgado, idCartorio, dadosProcuracao, matriculaOutorgado, idSubsidiaria, poderes, (urlDocumento || arquivo)
+# f8dd7ebd-8c5c-4f7e-92c0-4a9ac7e52ba4 - subsidiaria / super adm (1GUT)
+POST http://localhost:3333/procuracoes/cadastro/cadastrar-procuracao
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="idCartorio"
+
+2
+--abc
+Content-Disposition: form-data; name="idSubsidiaria"
+
+1
+--abc
+Content-Disposition: form-data; name="urlDocumento"
+
+https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+--abc
+Content-Disposition: form-data; name="matriculaOutorgado"
+
+F8718628
+--abc
+Content-Disposition: form-data; name="dadosProcuracao"
+
+{"dataEmissao":"2022-08-23","dataVencimento":"2022-09-02","dataManifesto":"2022-08-22","folha":42,"livro":42}
+--abc
+Content-Disposition: form-data; name="tipoFluxo"
+
+{"idFluxo":"f8dd7ebd-8c5c-4f7e-92c0-4a9ac7e52ba4","minuta":"1º Nível Gerencial UT (Superintendente UT)","fluxo":"SUBSIDIARIA"}
+--abc--
+
+###
+
+# .cadastrarProcuracao
+# multipart form data: funcaoOutorgado, idCartorio, dadosProcuracao, matriculaOutorgado, idSubsidiaria, poderes, (urlDocumento || arquivo)
+# 9b27efa1-99f3-4787-b6c8-ae018721c02c - particular / 2GUT
+POST http://localhost:3333/procuracoes/cadastro/cadastrar-procuracao
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="urlDocumento"
+
+https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+--abc
+Content-Disposition: form-data; name="matriculaOutorgado"
+
+F2326178
+--abc
+Content-Disposition: form-data; name="poderes"
+
+{"matricula":"F8718628","nome":"ROGERIO NATAL CERRI                     ","idProcuracao":null,"idProxy":"2fb9cb1f-f132-4445-8605-f4c9c73e8a1e","subsidiariasSelected":[1,3]}
+--abc
+Content-Disposition: form-data; name="dadosProcuracao"
+
+{"dataEmissao":"2022-08-09","dataVencimento":"2022-08-19"}
+--abc
+Content-Disposition: form-data; name="tipoFluxo"
+
+{"idFluxo":"9b27efa1-99f3-4787-b6c8-ae018721c02c","minuta":"2º Nível Gerencial UT (Gerente de Negócios ou Administração) | Particular","fluxo":"PARTICULAR"}
+--abc--
+
+###
+
+# .cadastrarProcuracao
+# multipart form data: funcaoOutorgado, idCartorio, dadosProcuracao, matriculaOutorgado, idSubsidiaria, poderes, (urlDocumento || arquivo)
+# 33c79330-1c11-4021-bf7c-d22e70359438 - publica / 1GUN
+POST http://localhost:3333/procuracoes/cadastro/cadastrar-procuracao
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="idCartorio"
+
+1
+--abc
+Content-Disposition: form-data; name="urlDocumento"
+
+https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+--abc
+Content-Disposition: form-data; name="matriculaOutorgado"
+
+F1705347
+--abc
+Content-Disposition: form-data; name="poderes"
+
+{"matricula":"F8718628","nome":"ROGERIO NATAL CERRI                     ","idProcuracao":null,"idProxy":"2fb9cb1f-f132-4445-8605-f4c9c73e8a1e","subsidiariasSelected":[1,3]}
+--abc
+Content-Disposition: form-data; name="dadosProcuracao"
+
+{"dataEmissao":"2022-08-23","dataVencimento":"2022-09-02","dataManifesto":"2022-08-22","folha":42,"livro":42}
+--abc
+Content-Disposition: form-data; name="tipoFluxo"
+
+{"idFluxo":"33c79330-1c11-4021-bf7c-d22e70359438","minuta":"1º Nível Gerencial UN (Gerente Geral)","fluxo":"PUBLICA"}
+--abc--
+
+###
+
+# .cadastrarProcuracao
+# multipart form data: funcaoOutorgado, idCartorio, dadosProcuracao, matriculaOutorgado, idSubsidiaria, poderes, (urlDocumento || arquivo), idMinutaCadastrada
+# 33c79330-1c11-4021-bf7c-d22e70359438 - publica / 1GUN
+# exemplo continuando de minuta cadastrada
+POST http://localhost:3333/procuracoes/cadastro/cadastrar-procuracao
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="idCartorio"
+
+1
+--abc
+Content-Disposition: form-data; name="urlDocumento"
+
+https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+--abc
+Content-Disposition: form-data; name="idMinutaCadastrada"
+
+0be846d3-f8f1-45b7-a89c-8c2c1bd8cd18
+--abc
+Content-Disposition: form-data; name="matriculaOutorgado"
+
+F1705347
+--abc
+Content-Disposition: form-data; name="poderes"
+
+{"matricula":"F8718628","nome":"ROGERIO NATAL CERRI                     ","idProcuracao":null,"idProxy":"d8ad9991dc33fb2b0c8b2a592922dd8a","subsidiariasSelected":[1,4]}
+--abc
+Content-Disposition: form-data; name="dadosProcuracao"
+
+{"dataEmissao":"2022-08-23","dataVencimento":"2022-09-02","dataManifesto":"2022-08-22","folha":42,"livro":42}
+--abc
+Content-Disposition: form-data; name="tipoFluxo"
+
+{"idFluxo":"33c79330-1c11-4021-bf7c-d22e70359438","minuta":"1º Nível Gerencial UN (Gerente Geral)","fluxo":"PUBLICA"}
+--abc--
+
+###
+
+# .cadastrarSubsidiaria
+# body: nome, cnpj, endereco, complemento, bairro, cep, municipio, uf, nomeReduzido
+POST http://localhost:3333/procuracoes/cadastro/cadastrar-subsidiaria
+content-type: application/json
+
+{
+  "nome": "Nome Subsidiaria",
+  "cnpj": "00.000.000/0000-00",
+  "endereco": "Rua do Subsidiaria",
+  "complemento": "Subsidiaria",
+  "bairro": "Subsidiaria",
+  "cep": "00000-000",
+  "municipio": "Subsidiaria",
+  "uf": "DF",
+  "nomeReduzido": "Subsidiaria"
+}
+
+###

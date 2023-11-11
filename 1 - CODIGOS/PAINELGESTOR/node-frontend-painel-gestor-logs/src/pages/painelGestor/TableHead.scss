@@ -1,0 +1,66 @@
+.styledTableHead {
+	thead > tr > th {
+		color: ghostwhite;
+		font-weight: bold;
+		font-size: 12px;
+		border-right: 1px solid #f0f0f0;
+	}
+
+	thead > tr > th:nth-child(odd) {
+		background-color: #275c82;
+	}
+
+	thead > tr > th:nth-child(even) {
+		background-color: #275c82;
+	}
+
+	thead th.ant-table-column-has-sorters:hover {
+		background: #002d4b;
+	}
+
+	thead
+		th.ant-table-column-has-sorters:hover
+		.ant-table-filter-trigger-container {
+		background: rgb(41, 72, 102);
+	}
+
+	.ant-table-filter-trigger-container-open,
+	.ant-table-filter-trigger-container:hover,
+	thead
+		th.ant-table-column-has-sorters:hover
+		.ant-table-filter-trigger-container:hover {
+		background: #608096;
+	}
+
+	.ant-table-column-sorter-up.active,
+	.ant-table-column-sorter-down.active {
+		color: yellow;
+	}
+
+	.ant-table-filter-trigger.active.ant-dropdown-trigger :first-child {
+		color: yellow;
+	}
+
+	.ant-table-column-sorters {
+		padding-right: 5px;
+	}
+}
+
+.noPagination {
+	.ant-table-pagination {
+		display: none;
+	}
+}
+
+.text-area{
+	display:flex;
+	flex-direction: column;
+	vertical-align:middle;
+	align-items: center;
+	justify-content: center;
+	resize: none;
+}
+
+.error-message {
+	color: red;
+  }

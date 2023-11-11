@@ -1,0 +1,56 @@
+.linhaFlex {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.cardResumo {
+}
+
+.cardResumoSelecionado {
+
+  border-bottom: 4px solid #40A9FF;
+}
+
+.cardResumoValor {
+  font-size: 2em;
+}
+
+.descricaoLinhaFlex {
+  display: flex;
+  align-items: stretch;
+  align-content: center;
+  gap: 16px;
+}
+
+.descricaoMetade {
+  width: 30%;
+}
+
+.descricaoCheia {
+  width: 100%;
+}
+
+.descricaoLinha {
+  line-height: 50px;
+  width: 50%;
+}
+
+.descricaoLinhaQuarter {
+  line-height: 32px;
+  width: 25%;
+}
+
+.containerForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.containerItem {
+  width: 75%;
+}
+

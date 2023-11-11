@@ -1,0 +1,19 @@
+.acoes {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  & .deleteButton {
+    color: red;
+    cursor: pointer;
+  }
+}
+
+.filtrosWrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  height: 100%;
+  & button {
+    width: 120px;
+  }
+}

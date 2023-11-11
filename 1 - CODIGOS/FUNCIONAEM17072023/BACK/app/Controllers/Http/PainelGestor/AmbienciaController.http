@@ -1,0 +1,15 @@
+###
+# .getVideo
+# Não são necessários parâmetros
+# Não utiliza o isTokenValid, não necessita de concessão de acesso
+GET  http://localhost:3333/ambiencia/api-imagem-ambiencia?uor=1552
+
+# variação informando a uor e o tipo do ambiente
+GET  http://localhost:3333/ambiencia/api-imagem-ambiencia?uor=1552&tipo=46
+
+# url no servidor de produção
+#https://super.intranet.bb.com.br/server-api/ambiencia/api-imagem-ambiencia?uor=1552&tipo=46
+
+# Retorno:
+# a imagem mais recente do ambiente selecionado
+# application/json; charset=utf-8

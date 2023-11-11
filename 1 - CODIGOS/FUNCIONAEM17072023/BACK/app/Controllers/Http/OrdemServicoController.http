@@ -1,0 +1,4 @@
+# .testeCommandRotinaNoturna
+# sem params
+GET http://localhost:3333/ordemserv/rotina
+

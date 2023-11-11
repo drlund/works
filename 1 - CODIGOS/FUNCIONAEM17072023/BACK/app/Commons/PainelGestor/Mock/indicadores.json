@@ -1,0 +1,175 @@
+[
+    {
+        "id": 1,
+        "nome": "Capacitacao",
+        "origem": "Nucleo X",
+        "descricao": "Descrição do Indicador",
+        "responsavel": "FXYZABDC",
+        "timeDesenv": [
+            "FXYZABCA",
+            "FXYZABCB",
+            "FXYZABCC",
+            "FXYZABCD"
+        ],
+        "variaveis": [
+            "Orçado",
+            "Realizado"
+        ],
+        "tiposUnidade": [
+            "UN",
+            "UA",
+            "UT",
+            "UE"
+        ]
+    },
+    {
+        "id": 2,
+        "nome": "DLD",
+        "origem": "Nucleo X",
+        "descricao": "Descrição do Indicador",
+        "responsavel": "FXYZABDC",
+        "timeDesenv": [
+            "FXYZABCA",
+            "FXYZABCB",
+            "FXYZABCC",
+            "FXYZABCD"
+        ],
+        "variaveis": [
+            "Orçado",
+            "Realizado"
+        ],
+        "tiposUnidade": [
+            "UN",
+            "UA",
+            "UT",
+            "UE"
+        ]
+    },
+    {
+        "id": 3,
+        "nome": "Fiscalização - Tratamento",
+        "origem": "Nucleo X",
+        "descricao": "Descrição do Indicador",
+        "responsavel": "FXYZABDC",
+        "timeDesenv": [
+            "FXYZABCA",
+            "FXYZABCB",
+            "FXYZABCC",
+            "FXYZABCD"
+        ],
+        "variaveis": [
+            "Orçado",
+            "Realizado"
+        ],
+        "tiposUnidade": [
+            "UN",
+            "UA",
+            "UT",
+            "UE"
+        ]
+    },
+    {
+        "id": 4,
+        "nome": "Fiscalização - Documentação",
+        "origem": "Nucleo X",
+        "descricao": "Descrição do Indicador",
+        "responsavel": "FXYZABDC",
+        "timeDesenv": [
+            "FXYZABCA",
+            "FXYZABCB",
+            "FXYZABCC",
+            "FXYZABCD"
+        ],
+        "variaveis": [
+            "Orçado",
+            "Realizado"
+        ],
+        "tiposUnidade": [
+            "UN",
+            "UA",
+            "UT",
+            "UE"
+        ]
+    },
+    {
+        "id": 5,
+        "nome": "API Notificações",
+        "origem": "Nucleo X",
+        "descricao": "Descrição do Indicador",
+        "responsavel": "FXYZABDC",
+        "timeDesenv": [
+            "FXYZABCA",
+            "FXYZABCB",
+            "FXYZABCC",
+            "FXYZABCD"
+        ],
+        "variaveis": [
+            "Orçado",
+            "Realizado"
+        ],
+        "tiposUnidade": [
+            "UN",
+            "UA",
+            "UT",
+            "UE"
+        ]
+    },
+    {
+        "id": 6,
+        "nome": "API Questionários",
+        "origem": "Nucleo X",
+        "descricao": "Descrição do Indicador",
+        "responsavel": "FXYZABDC",
+        "timeDesenv": [
+            "FXYZABCA",
+            "FXYZABCB",
+            "FXYZABCC",
+            "FXYZABCD"
+        ],
+        "variaveis": [
+            "Orçado",
+            "Realizado"
+        ],
+        "tiposUnidade": [
+            "UN",
+            "UA",
+            "UT",
+            "UE"
+        ]
+    },
+    {
+        "id": 7,
+        "nome": "Guarda Centralizada",
+        "origem": "Nucleo X",
+        "descricao": "Descrição do Indicador",
+        "responsavel": "FXYZABDC",
+        "timeDesenv": [
+            "FXYZABCA",
+            "FXYZABCB",
+            "FXYZABCC",
+            "FXYZABCD"
+        ],
+        "variaveis": [
+            "ENVIADOS_1_8",
+            "ENVIADOS_9_10",
+            "ACOLHIDOS"
+        ],
+        "formula": [
+            "(variaveis.ENVIADOS_1_8/variaveis.ACOLHIDOS) * 100",
+            "((variaveis.ACOLHIDOS - variaveis.ENVIADOS_1_8)/variaveis.ACOLHIDOS) * 100",
+            "(variaveis.ENVIADOS_9_10/variaveis.ACOLHIDOS) * 100",
+            "((variaveis.ACOLHIDOS - variaveis.ENVIADOS_9_10)/variaveis.ACOLHIDOS) * 100"
+        ],
+        "flags": {
+            "VERDE": "variaveis.ACOLHIDOS - variaveis.ENVIADOS_1_8 <= 0",
+            "AMARELO": "variaveis.ACOLHIDOS - variaveis.ENVIADOS_1_8 <= variaveis.ENVIADOS_9_10",
+            "VERMELHO": "variaveis.ACOLHIDOS - (variaveis.ENVIADOS_1_8 + variaveis.ENVIADOS_9_10) > 0"
+        },
+        "tiposUnidade": [
+            "UN",
+            "UA",
+            "UT",
+            "UE"
+        ]
+    }
+]

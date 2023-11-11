@@ -1,0 +1,31 @@
+.pesquisaWrapper{
+  flex: 1 1;
+  align-items: center;  
+  margin-bottom: 30px;
+}
+
+.paragraph{
+  text-align: justify;
+}
+
+.imgWrapper > img{
+  width: 400px;
+}
+
+.textArea{
+  height: 100%;
+}
+
+.uploadWrapper{
+  display:flex;
+}
+
+.bbinput{
+  width:300px;
+  margin-bottom: 10px;
+  justify-self: start;
+  text-align: left;
+
+}
+
+// style={{width: 150, marginBottom: 10, justifySelf: ''}}

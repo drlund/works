@@ -1,0 +1,19 @@
+.navbar-main {
+    background-color: #fff !important;
+    padding: 0 !important;
+    box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+    z-index: 1;
+}
+
+.navbar-menu-item {
+    height: 64px;
+    padding: calc((64px - 20px) / 2) 24px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s, padding 0s;
+}
+  
+.navbar-menu-item:hover {
+    background: rgba(0, 0, 0, 0.025)
+}
+  

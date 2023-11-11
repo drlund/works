@@ -1,0 +1,62 @@
+estrutura atual:
+duas tabelas>
+  1 - contém a estrutura dos dados
+  2 - contém a estrutura da tabela
+
+ao acessar o relatório, o banco de dados retorna as informações referentes ao funcionário (acesso restrito para superintendentes, diretores e executivos)
+três tabelas a serem consultadas:
+  1 - contem a estrutura dos dados: nome, index, tipo, tamanho, render
+  2 - contem os dados a serem consultados
+  3 - contem a estrutura da tabela
+
+ao receber o JSON, verificar sua estrutura:
+  - um método que gera ColumnGroup, que vai se repetindo enquanto encontrar uma key
+    chamada "grupos",
+  - um método que gera Column, que recebe o controle quando não há mais grupos para processar
+
+Gerador de json 0998:
+
+var dados0998
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+for(var i = 1; i < 1000; i++) {
+  dados0998.push(
+  	{
+      "key": i,
+      "prefixo": (i+'').padStart(4, '0'),
+      "dependencia": "depend_" + (i+'').padStart(4, '0'),
+      "gerPeqEmpAteDezAnos": `${getRandomIntInclusive(0, 10)}`,
+      "gerPeqEmpDeDezaVinteAnos": `${getRandomIntInclusive(0, 10)}`,
+      "gerPeqEmpAcimaDe20Anos": `${getRandomIntInclusive(0, 10)}`,
+      "gerEmpAteDezAnos": `${getRandomIntInclusive(0, 10)}`,
+      "gerEmpDeDezaVinteAnos": `${getRandomIntInclusive(0, 10)}`,
+      "gerEmpAcimaDe20Anos": `${getRandomIntInclusive(0, 10)}`,
+      "gerEstFluAteDezAnos": `${getRandomIntInclusive(0, 10)}`,
+      "gerEstFluDeDezaVinteAnos": `${getRandomIntInclusive(0, 10)}`,
+      "gerEstFluAcimaDe20Anos": `${getRandomIntInclusive(0, 10)}`,
+      "gerEstAteDezAnos": `${getRandomIntInclusive(0, 10)}`,
+      "gerEstDeDezaVinteAnos": `${getRandomIntInclusive(0, 10)}`,
+      "gerEstAcimaDe20Anos": `${getRandomIntInclusive(0, 10)}`,
+      "gerProdRurAteDezAnos": `${getRandomIntInclusive(0, 10)}`,
+      "gerProdRurDeDezaVinteAnos": `${getRandomIntInclusive(0, 10)}`,
+      "gerProdRurAcimaDe20Anos": `${getRandomIntInclusive(0, 10)}`,
+      "gerPersExcAteDezAnos": "",
+      "gerPersExcDeDezaVinteAnos": `${getRandomIntInclusive(0, 10)}`,
+      "gerPersExcAcimaDe20Anos": `${getRandomIntInclusive(0, 10)}`,
+      "gerAtendAteDezAnos": "",
+      "gerAtendDeDezaVinteAnos": `${getRandomIntInclusive(0, 10)}`,
+      "gerAtendAcimaDe20Anos": `${getRandomIntInclusive(0, 10)}`,
+      "supAtendAteDezAnos": `${getRandomIntInclusive(0, 10)}`,
+      "supAtendDeDezaVinteAnos": `${getRandomIntInclusive(0, 10)}`,
+      "supAtendAcimaDe20Anos": `${getRandomIntInclusive(0, 10)}`,
+      "gerServAteDezAnos": "",
+      "gerServDeDezaVinteAnos": `${getRandomIntInclusive(0, 10)}`,
+      "gerServAcimaDe20Anos": `${getRandomIntInclusive(0, 10)}`
+		}
+  )
+}

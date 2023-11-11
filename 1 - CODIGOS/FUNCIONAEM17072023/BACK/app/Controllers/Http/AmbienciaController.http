@@ -1,0 +1,28 @@
+###
+# .getImagemApi
+# params: uor (a uor do prefixo que se deseja obter a imagem)
+# Não utiliza o isTokenValid, não necessita de concessão de acesso
+GET  http://localhost:3333/ambiencia/api-imagem-ambiencia?uor=000347227
+
+# Retorno:
+# objeto com as informações do vídeo mais próximo da data atual
+# application/json; charset=utf-8
+# Exemplo:
+# {
+#   "id": 92,
+#   "urlVideo": "nomeVideo.mp4",
+#   "dataInicioReproducao": "29/12/2022 12:00:00",
+#   "dataFimReproducao": "2022-12-29T03:00:00.000Z",
+#   "matriculaFunci": "F4539214",
+#   "nomeFunci": "Izadora Netz Sieczkowski",
+#   "ativo": "1",
+#   "createdAt": "05/12/2022 11:49:19",
+#   "updatedAt": "05/12/2022 11:49:19"
+# }
+
+###
+# Quando a uor não é informada
+# .getImagemApi
+# params: uor (a uor do prefixo que se deseja obter a imagem)
+# Não utiliza o isTokenValid, não necessita de concessão de acesso
+GET  http://localhost:3333/ambiencia/api-imagem-ambiencia

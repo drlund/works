@@ -1,0 +1,9 @@
+.acoes{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  & .deleteButton{
+    color: red;
+    cursor: pointer;
+  }
+}

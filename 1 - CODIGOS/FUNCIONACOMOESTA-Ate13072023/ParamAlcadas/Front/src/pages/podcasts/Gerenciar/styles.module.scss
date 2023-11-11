@@ -1,0 +1,14 @@
+.containerGerenciar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  & .divider {
+    margin-bottom: 0.025rem;
+  }
+
+  & Button {
+    width: fit-content;
+  }
+
+}

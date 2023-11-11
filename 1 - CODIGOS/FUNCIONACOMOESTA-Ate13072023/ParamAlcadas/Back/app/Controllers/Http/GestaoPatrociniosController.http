@@ -1,0 +1,152 @@
+###
+# .getOrcamento
+# params: token
+# necessário usuário estar logado (token)
+GET	http://localhost:3333/patrocinios/getOrcamento?token=123&id=210
+
+# Retorno
+# Json com dados do orçamento
+# Content-Type: text/plain; charset=utf-8
+# Exemplo:
+#
+
+###
+# .getSolicitacao
+# params: token
+# necessário usuário estar logado (token)
+GET	http://localhost:3333/patrocinios/solicitacoes?token=123&idSolicitacao=449
+
+# Retorno
+# Json com dados das solicitações
+# Content-Type: text/plain; charset=utf-8
+# Exemplo:
+#
+{
+  "solicitacoes": [
+    {
+     "tabela": "solicitacao",
+      "idSolicitacao": 449,
+      "prefixoSolicitante": "9009",
+      "nomeSolicitante": "SUPER ADM",
+      "dataInicioEvento": "24/07/2023",
+      "dataFimEvento": "28/07/2023",
+      "dtInclusao": "08/05/2023 11:57",
+      "nomeEvento": "Diversidade, o caminho que leva a resultados",
+      "valorEvento": "R$ 851.851,00",
+      "fase": "Análise para Acolhimento",
+      "emFaseInclusao": false,
+      "statusEmAndamento": true,
+      "status": "Em Andamento",
+      "colorStatus": null,
+      "votacaoEmAndamento": false,
+      "voto": [
+        {
+          "id": 18,
+          "idSolicitacao": 449,
+          "matriculaVotante": "F3244668",
+          "nomeVotante": "Fernando Jose Esteves Cadavez",
+          "codFuncaoVotante": "13031",
+          "nomeFuncaoVotante": "GER ADMINIST UT",
+          "prefixoVotante": "9009",
+          "nomePrefixoVotante": "SUPER ADM",
+          "deferido": 1,
+          "ativo": 1,
+          "dtVoto": "08/05/2023 12:10",
+          "tipoVotacao": 3
+        },
+        {
+          "id": 19,
+          "idSolicitacao": 449,
+          "matriculaVotante": "F6229379",
+          "nomeVotante": "Leonor Medeiros de Oliveira",
+          "codFuncaoVotante": "13031",
+          "nomeFuncaoVotante": "GER ADMINIST UT",
+          "prefixoVotante": "9009",
+          "nomePrefixoVotante": "SUPER ADM",
+          "deferido": 1,
+          "ativo": 1,
+          "dtVoto": "08/05/2023 12:12",
+          "tipoVotacao": 3
+        },
+        {
+          "id": 20,
+          "idSolicitacao": 449,
+          "matriculaVotante": "F0431701",
+          "nomeVotante": "Alexandre Disconzi Perufo",
+          "codFuncaoVotante": "13031",
+          "nomeFuncaoVotante": "GER ADMINIST UT",
+          "prefixoVotante": "9009",
+          "nomePrefixoVotante": "SUPER ADM",
+          "deferido": 1,
+          "ativo": 1,
+          "dtVoto": "08/05/2023 12:13",
+          "tipoVotacao": 3
+        },
+        {
+          "id": 21,
+          "idSolicitacao": 449,
+          "matriculaVotante": "F8718628",
+          "nomeVotante": "Rogerio Natal Cerri",
+          "codFuncaoVotante": "13022",
+          "nomeFuncaoVotante": "SUPERINTENDENTE UT",
+          "prefixoVotante": "9009",
+          "nomePrefixoVotante": "SUPER ADM",
+          "deferido": 1,
+          "ativo": 1,
+          "dtVoto": "08/05/2023 12:14",
+          "tipoVotacao": 5
+        }
+      ],
+      "qtdVotos": 4,
+      "liberaVoto": false,
+      "liberaEdicao": false,
+      "liberaCancelamento": false,
+      "solicitadoForaPrazo": 0,
+      "gestao": [],
+      "temBriefing": null,
+      "temAutDimac": null,
+      "isRespAnalise": true,
+      "respAnalise": [],
+      "equipeComunicacao": null,
+      "obsDevolucao": null,
+      "devolucao": "",
+      "nrMKT": ""
+    }
+  ],
+  "membroComite": 0,
+  "listaStatus": [
+    {
+      "id": 1,
+      "descricao": "Em Andamento",
+      "colorStatus": null,
+      "dtAtualizacao": "10/03/2020 10:51"
+    },
+    {
+      "id": 2,
+      "descricao": "Concluído",
+      "colorStatus": "#87d068",
+      "dtAtualizacao": "10/03/2020 10:52"
+    },
+    {
+      "id": 3,
+      "descricao": "Cancelado",
+      "colorStatus": "#aaa",
+      "dtAtualizacao": "10/03/2020 10:52"
+    }
+  ],
+  "listaAno": [
+    {
+      "ano": "2023"
+    },
+    {
+      "ano": "2022"
+    },
+    {
+      "ano": "2021"
+    },
+    {
+      "ano": "2020"
+    }
+  ],
+  "isEquipeComunic": true
+}

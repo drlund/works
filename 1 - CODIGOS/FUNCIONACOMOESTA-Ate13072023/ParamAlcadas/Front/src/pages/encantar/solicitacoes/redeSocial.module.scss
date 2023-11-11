@@ -1,0 +1,11 @@
+.imgWrapper > img {
+  width: 400px;
+}
+
+.descricaoWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  min-height: 300px;
+}

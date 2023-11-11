@@ -1,0 +1,11 @@
+.edition div.DraftEditor-root {
+  border: 1px solid #ECECEC;
+  background-color: #FAFAFA;
+  height: 200px;
+  overflow-y: auto;
+}
+
+.edition div.DraftEditor-editorContainer,
+.edition div.public-DraftEditor-content {
+    height: 100%;
+  }

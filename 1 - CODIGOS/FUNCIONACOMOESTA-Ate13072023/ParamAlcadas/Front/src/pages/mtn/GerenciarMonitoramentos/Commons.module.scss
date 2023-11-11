@@ -1,0 +1,20 @@
+.extrasTableWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.extraTableUpdate {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.acoesIcon {
+  color: #1890ff;
+  cursor: pointer;
+}
+
+.deleteIcon {
+  color: #ff4d4f;
+  cursor: pointer;
+}

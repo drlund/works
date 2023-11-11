@@ -1,0 +1,496 @@
+###
+# .solicitacoes
+# Não são necessários parâmetros
+GET  http://localhost:3333/flexcriterios/solicitacoes?filtro=8
+
+# Retorno:
+# OK
+###
+
+###
+# .obterFunciByMatricula
+# param1: matrícula do funcionário
+GET  http://localhost:3333/flexcriterios/funcibymatricula/?matricula=F3283371
+
+# Retorno:
+# OK
+###
+
+###
+# .obterDadosPrefixo
+# param1: prefixo de uma dependência
+GET  http://localhost:3333/flexcriterios/dadosprefixo/?prefixo=8506
+
+# Retorno:
+# OK
+###
+
+###
+# .obterDadosFuncao
+# param1: Função
+GET  http://localhost:3333/flexcriterios/dadosfuncao/?funcao=17401
+
+# Retorno:
+# OK
+###
+
+###
+# .obterAnaliseFunci
+# param1: Matrícula do Funcionário Selecionado
+# param2: Prefixo da Dependência de Destino
+# param3: Código da Função de Destino
+GET  http://localhost:3333/flexcriterios/analisefunci?matricula=F3283371&prefixoDestino=39&funcaoDestino=4862
+
+# Retorno:
+# OK
+###
+
+###
+# .listarTiposSolicitacoes
+# noParams
+GET  http://localhost:3333/flexcriterios/tipos
+
+# Retorno:
+# OK
+###
+
+###
+# .listarEtapas
+# noParams
+GET  http://localhost:3333/flexcriterios/etapas
+
+# Retorno:
+# [
+#   {
+#     "id": 1,
+#     "nome": "Solicitação",
+#     "descricao": null,
+#     "sequencial": 0,
+#     "ativo": "1"
+#   },
+#   ...
+# ]
+###
+
+###
+# .listarStatus
+# noParams
+GET  http://localhost:3333/flexcriterios/status
+
+# Retorno:
+# [
+#   {
+#     "id": 1,
+#     "nome": "Aguardando Manifestação",
+#     "cor": "#f9f7f4"
+#   },
+#   ...
+# ]
+###
+
+###
+# .listarLocalizacoes
+# noParams
+GET  http://localhost:3333/flexcriterios/localizacoes
+
+# Retorno:
+# [
+#   {
+#     "id": 1,
+#     "nome": "Prefixos Envolvidos",
+#     "cor": "#fa9a50"
+#   },
+#   ...
+# ]
+###
+
+###
+# .listarAcoes
+# noParams
+GET  http://localhost:3333/flexcriterios/acoes
+
+# Retorno:
+# [
+#   {
+#     "id": 1,
+#     "nome": "Justificativa",
+#     "descricao": "Justificativa inicial da solicitação",
+#     "ativo": "1",
+#     "obrigatorio": "0",
+#     "createdAt": "2023-03-03 18:20:03",
+#     "updatedAt": "2023-03-03 18:20:03"
+#   },
+#   ...
+# ]
+###
+
+###
+# .listarSituacoes
+# noParams
+GET  http://localhost:3333/flexcriterios/situacoes
+
+# Retorno:
+# [
+#   {
+#     "id": 1,
+#     "nome": "Pendente",
+#   },
+#   ...
+# ]
+###
+
+###
+# .incluirSolicitacao
+POST  http://localhost:3333/flexcriterios/novasolicitacao
+Content-Type: application/json
+
+{
+    "dadosSolicitacao": {
+        "matricula": "F4539214",
+        "nome": "IZADORA NETZ SIECZKOWSKI",
+        "funcaoLotacao": "14011",
+        "descricaoCargo": "ASSESSOR I UT",
+        "prefixoOrigem": {
+            "prefixo": "9009",
+            "nome": "SUPER ADM",
+            "prefixoGerev": "",
+            "nomeGerev": "",
+            "prefixoSuper": "9009",
+            "nomeSuper": "SUPER ADM",
+            "prefixoDiretoria": "9010",
+            "nomeDiretoria": "UAC-ATEND. CANAIS",
+            "clarosOrigem": "4,7 %",
+            "clarosOrigemDepois": "5,1 %"
+        },
+        "prefixoDestino": {
+            "prefixo": "9905",
+            "nome": "DITEC-UOS",
+            "prefixoDiretoria": "9903",
+            "nomeDiretoria": "DITEC-TECNOLOGIA",
+            "clarosDestino": "4,2 %"
+        },
+        "funcaoPretendida": "12441",
+        "nomeFuncaoPretendida": "ASSESSOR III TI TR",
+        "analise": {
+            "tipoMovimentacao": "Descenso",
+            "pit": {
+                "valor": "NÂO",
+                "lista": []
+            },
+            "qualificado": {
+                "valor": "NÂO",
+                "lista": []
+            },
+            "movimentacao": [
+                {
+                    "nome": "vantagemNomeacao",
+                    "label": "Nomeação com vantagem",
+                    "valor": "Não (Municípios Limítrofes ou mesma região metropolitana)",
+                    "flag": true
+                },
+                {
+                    "nome": "distanciaRod",
+                    "label": "Distância por Rodovia",
+                    "valor": "0 km :: (0d 0h 0m aprox.)",
+                    "flag": true
+                },
+                {
+                    "nome": "distanciaLinear",
+                    "label": "Distância Linear",
+                    "valor": "0 km",
+                    "flag": true
+                },
+                {
+                    "nome": "municipiosOrigDest",
+                    "label": "Municípios Limítrofes",
+                    "valor": "SÃO LIMÍTROFES OU REG. METROPOLITANA",
+                    "flag": true
+                }
+            ],
+            "validacao": [
+                {
+                    "nome": "certificacoes",
+                    "label": "Certificações",
+                    "valor": "CPA-20 R",
+                    "flag": false
+                },
+                {
+                    "nome": "trilhaEtica",
+                    "label": "Trilha Ética",
+                    "valor": "SIM",
+                    "flag": true
+                },
+                {
+                    "nome": "posseBB",
+                    "label": "Posse no Banco",
+                    "valor": "06/12/2010",
+                    "flag": true
+                },
+                {
+                    "nome": "pendentePosse",
+                    "label": "Nomeação pendente de posse",
+                    "valor": "PENDENTE DE POSSE",
+                    "flag": false
+                },
+                {
+                    "nome": "inamovivel",
+                    "label": "Inamovível",
+                    "valor": "NÃO",
+                    "flag": true
+                },
+                {
+                    "nome": "habitualidade",
+                    "label": "Habitualidade",
+                    "valor": "SEM IMPEDIMENTO",
+                    "flag": true
+                },
+                {
+                    "nome": "incorporado",
+                    "label": "Incorporado",
+                    "valor": "FUNCI BB",
+                    "flag": true
+                },
+                {
+                    "nome": "impedimentoODI",
+                    "label": "Impedimento ODI",
+                    "valor": "SEM IMPEDIMENTO",
+                    "flag": true
+                },
+                {
+                    "nome": "vcp",
+                    "label": "VCP/Período",
+                    "valor": "NÃO",
+                    "flag": true
+                },
+                {
+                    "nome": "inabilitadoTCU",
+                    "label": "Inabilitado TCU",
+                    "valor": "SEM IMPEDIMENTO",
+                    "flag": true
+                }
+            ],
+            "gfmFunciOrigem": 16,
+            "gfmFuncaoDestino": 100,
+            "impedimentoInstitucionalRelacional": {
+                "relac": false,
+                "instit": false
+            }
+        },
+        "oportunidade": "sim",
+        "tipoFlex": [
+            1
+        ],
+        "justificativa": "ela quer codar."
+    }
+}
+
+# {
+#     "dadosSolicitacao": {
+#         "matricula": "F4683333",
+#         "nome": "JEFFERSON DE CARVALHO ALEXANDRE",
+#         "funcaoLotacao": "14011",
+#         "descricaoCargo": "ASSESSOR I UT",
+#         "prefixoOrigem": {
+#             "prefixo": "9009",
+#             "nome": "SUPER ADM",
+#             "prefixoDiretoria": "9010",
+#             "nomeDiretoria": "UAC-ATEND. CANAIS",
+#             "clarosOrigem": "4,7 %",
+#             "clarosOrigemDepois": "5,1 %"
+#         },
+#         "prefixoDestino": {
+#             "prefixo": "3596",
+#             "nome": "CONGRESSO NACIONAL",
+#             "prefixoDiretoria": "8592",
+#             "nomeDiretoria": "DIVAR-COMERCIAL VAR",
+#             "clarosDestino": "22,2 %"
+#         },
+#         "funcaoPretendida": "17101",
+#         "nomeFuncaoPretendida": "GER GERAL UN",
+#         "analise": {
+#             "tipoMovimentacao": "Ascensão",
+#             "pit": {
+#                 "valor": "NÂO",
+#                 "lista": []
+#             },
+#             "qualificado": {
+#                 "valor": "NÂO",
+#                 "lista": []
+#             },
+#             "movimentacao": [
+#                 {
+#                     "nome": "vantagemNomeacao",
+#                     "label": "Nomeação com vantagem",
+#                     "valor": "Não (Municípios Limítrofes ou mesma região metropolitana)",
+#                     "flag": true
+#                 },
+#                 {
+#                     "nome": "distanciaRod",
+#                     "label": "Distância por Rodovia",
+#                     "valor": "0 km :: (0d 0h 0m aprox.)",
+#                     "flag": true
+#                 },
+#                 {
+#                     "nome": "distanciaLinear",
+#                     "label": "Distância Linear",
+#                     "valor": "0 km",
+#                     "flag": true
+#                 },
+#                 {
+#                     "nome": "municipiosOrigDest",
+#                     "label": "Municípios Limítrofes",
+#                     "valor": "SÃO LIMÍTROFES OU REG. METROPOLITANA",
+#                     "flag": true
+#                 }
+#             ],
+#             "validacao": [
+#                 {
+#                     "nome": "certificacoes",
+#                     "label": "Certificações",
+#                     "valor": "SEM CERTIFICAÇÕES",
+#                     "flag": false
+#                 },
+#                 {
+#                     "nome": "trilhaEtica",
+#                     "label": "Trilha Ética",
+#                     "valor": "SIM",
+#                     "flag": true
+#                 },
+#                 {
+#                     "nome": "posseBB",
+#                     "label": "Posse no Banco",
+#                     "valor": "24/09/2007",
+#                     "flag": true
+#                 },
+#                 {
+#                     "nome": "pendentePosse",
+#                     "label": "Nomeação pendente de posse",
+#                     "valor": "PENDENTE DE POSSE",
+#                     "flag": false
+#                 },
+#                 {
+#                     "nome": "inamovivel",
+#                     "label": "Inamovível",
+#                     "valor": "NÃO",
+#                     "flag": true
+#                 },
+#                 {
+#                     "nome": "habitualidade",
+#                     "label": "Habitualidade",
+#                     "valor": "SEM IMPEDIMENTO",
+#                     "flag": true
+#                 },
+#                 {
+#                     "nome": "incorporado",
+#                     "label": "Incorporado",
+#                     "valor": "FUNCI BB",
+#                     "flag": true
+#                 },
+#                 {
+#                     "nome": "impedimentoODI",
+#                     "label": "Impedimento ODI",
+#                     "valor": "SEM IMPEDIMENTO",
+#                     "flag": true
+#                 },
+#                 {
+#                     "nome": "vcp",
+#                     "label": "VCP/Período",
+#                     "valor": "NÃO",
+#                     "flag": true
+#                 },
+#                 {
+#                     "nome": "inabilitadoTCU",
+#                     "label": "Inabilitado TCU",
+#                     "valor": "SEM IMPEDIMENTO",
+#                     "flag": true
+#                 }
+#             ],
+#             "gfmFunciOrigem": 16,
+#             "gfmFuncaoDestino": 10,
+#             "impedimentoInstitucionalRelacional": {
+#                 "relac": false,
+#                 "instit": false
+#             }
+#         },
+#         "oportunidade": "CGH000BSB",
+#         "tipoFlex": [
+#             1
+#         ],
+#         "justificativa": "Funcionário possui as características necessárias para exercer a função.",
+#     }
+# }
+### Retorno:
+### OK
+###
+
+###
+# .detalharSolicitacao
+# param1: id da solicitação
+GET  http://localhost:3333/flexcriterios/detalhar?id=29
+
+# Retorno:
+# OK
+###
+
+###
+# .listarEscaloes
+# sem param
+GET  http://localhost:3333/flexcriterios/escaloes
+
+# Retorno:
+# OK
+###
+
+###
+# .dadosEscalao
+# param1: prefixo
+GET  http://localhost:3333/flexcriterios/dadosescalao?prefixo=8592
+
+# Retorno:
+# OK
+###
+
+###
+# .manifestar
+POST  http://localhost:3333/flexcriterios/manifestar
+Content-Type: application/json
+
+{
+    "manifestacao": {
+        "idSolicitacao": 29,
+        "parecer": "1",
+        "texto": "Manifestação Positivamente Positiva"
+    }
+}
+###
+
+###
+# .analisar
+POST  http://localhost:3333/flexcriterios/analisar
+Content-Type: application/json
+
+{
+    "analise": {
+        "idSolicitacao": 29,
+        "parecer": "0",
+        "texto": "Manifestação Positivamente Positiva"
+    }
+}
+###
+
+###
+# .despachar
+POST  http://localhost:3333/flexcriterios/despachar
+Content-Type: application/json
+
+{
+    "despacho": {
+        "idSolicitacao": 29,
+        "diretoria": ["9903", "DITEC-TECNOLOGIA"],
+        "idEscalao": "2",
+        "coordenador": false,
+        "quorum": null,
+        "matricula": null
+    }
+}
+###

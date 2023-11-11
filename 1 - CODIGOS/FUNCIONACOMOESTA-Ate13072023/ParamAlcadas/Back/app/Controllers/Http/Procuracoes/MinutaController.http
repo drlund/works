@@ -1,0 +1,433 @@
+# MinutaController.saveMinuta
+# body: minuta
+# nota para este funcionar: gerar um uuid novo em "idMinuta"
+POST http://localhost:3333/procuracoes/minutas
+content-type: application/json
+
+{
+  "tipoFluxo": {
+    "idFluxo": "9b27efa1-99f3-4787-b6c8-ae018721c02c",
+    "minuta": "2º Nível Gerencial UT (Gerente de Negócios ou Administração) | Particular"
+  },
+  "dadosMinuta": {
+    "idMinuta": "new random uuid",
+    "customData": "{\"mock\":\"Mock-Valor\"}",
+    "diffs": "Index: diff\n===================================================================\n--- diff\n+++ diff\n@@ -1,63 +1,63 @@\n \r\n <p>\r\n   <span data-contrast=\"auto\">SUBSTABELECIMENTO DE PROCURAÇÃO bastante que faz(em):  \r\n-  <strong style=\"color: red;\" data-display=\"NOME DO OUTORGANTE\" data-minuta=\"outorgante.nome\">&lt;\"NOME DO OUTORGANTE\"&gt;</strong></span></p>\r\n+  <strong style=\"color: black;\" data-display=\"NOME DO OUTORGANTE\" data-minuta-ok=\"outorgante.nome\">ROGERIO NATAL CERRI                     </strong></span></p>\r\n   \r\n   <p>\r\n   <span data-contrast=\"auto\">Saibam quantos este público instrumento de substabelecimento de procuração virem que aos  \r\n-  <strong style=\"color: red;\" data-display=\"DIA HOJE\" data-minuta=\"cartorio.dayToday\">&lt;\"DIA HOJE\"&gt;</strong></span>  \r\n+  <strong style=\"color: black;\" data-display=\"DIA HOJE\" data-minuta-ok=\"cartorio.dayToday\">28</strong></span>  \r\n   <span data-contrast=\"auto\">dias do mês  \r\n-  <strong style=\"color: red;\" data-display=\"MÊS HOJE\" data-minuta=\"cartorio.monthToday\">&lt;\"MÊS HOJE\"&gt;</strong></span>  \r\n+  <strong style=\"color: black;\" data-display=\"MÊS HOJE\" data-minuta-ok=\"cartorio.monthToday\">novembro</strong></span>  \r\n   <span data-contrast=\"auto\">do ano de  \r\n-  <strong style=\"color: red;\" data-display=\"ANO HOJE\" data-minuta=\"cartorio.yearToday\">&lt;\"ANO HOJE\"&gt;</strong></span>  \r\n+  <strong style=\"color: black;\" data-display=\"ANO HOJE\" data-minuta-ok=\"cartorio.yearToday\">2022</strong></span>  \r\n   <span data-contrast=\"auto\">nesta cidade de  \r\n-  <strong style=\"color: red;\" data-display=\"CIDADE/UF DO CARTORIO\" data-minuta=\"cartorio.cidadeUF\">&lt;\"CIDADE/UF DO CARTORIO\"&gt;</strong></span>  \r\n+  <strong style=\"color: black;\" data-display=\"CIDADE/UF DO CARTORIO\" data-minuta-ok=\"cartorio.cidadeUF\">BRASILIA/DF</strong></span>  \r\n   <span data-contrast=\"auto\">, neste Serviço Notarial, perante mim, Tabelião, compareceu como outorgante, na qualidade de Superintendente (ou Gerentes), o</span>  \r\n   <span data-contrast=\"auto\">(a)</span>  \r\n   <span data-contrast=\"auto\">Sr(a).  \r\n-  <strong style=\"color: red;\" data-display=\"NOME DO OUTORGANTE\" data-minuta=\"outorgante.nome\">&lt;\"NOME DO OUTORGANTE\"&gt;</strong></span>  \r\n+  <strong style=\"color: black;\" data-display=\"NOME DO OUTORGANTE\" data-minuta-ok=\"outorgante.nome\">ROGERIO NATAL CERRI                     </strong></span>  \r\n   <span data-contrast=\"auto\">,</span>  \r\n   <span data-contrast=\"auto\">brasileiro(a)</span>  \r\n   <span data-contrast=\"auto\">,  \r\n-  <strong style=\"color: red;\" data-display=\"ESTADO CIVIL DO OUTORGANTE\" data-minuta=\"outorgante.estadoCivil\">&lt;\"ESTADO CIVIL DO OUTORGANTE\"&gt;</strong></span>  \r\n+  <strong style=\"color: black;\" data-display=\"ESTADO CIVIL DO OUTORGANTE\" data-minuta-ok=\"outorgante.estadoCivil\">2</strong></span>  \r\n   <span data-contrast=\"auto\">,</span>  \r\n   <span data-contrast=\"auto\">bancário(a)</span>  \r\n   <span data-contrast=\"auto\">, matrícula  \r\n-  <strong style=\"color: red;\" data-display=\"MATRICULA DO OUTORGANTE\" data-minuta=\"outorgante.matricula\">&lt;\"MATRICULA DO OUTORGANTE\"&gt;</strong></span>  \r\n+  <strong style=\"color: black;\" data-display=\"MATRICULA DO OUTORGANTE\" data-minuta-ok=\"outorgante.matricula\">F8718628</strong></span>  \r\n   <span data-contrast=\"auto\">, portador da cédula de identidade RG nº  \r\n-  <strong style=\"color: red;\" data-display=\"RG DO OUTORGANTE\" data-minuta=\"outorgante.rg\">&lt;\"RG DO OUTORGANTE\"&gt;</strong></span>  \r\n+  <strong style=\"color: black;\" data-display=\"RG DO OUTORGANTE\" data-minuta-ok=\"outorgante.rg\">29135015X - SSP - SP    </strong></span>  \r\n   <span data-contrast=\"auto\">, inscrito(s) no CPF/MF sob nº.  \r\n-  <strong style=\"color: red;\" data-display=\"CPF DO OUTORGANTE\" data-minuta=\"outorgante.cpf\">&lt;\"CPF DO OUTORGANTE\"&gt;</strong></span>  \r\n+  <strong style=\"color: black;\" data-display=\"CPF DO OUTORGANTE\" data-minuta-ok=\"outorgante.cpf\">21449814859</strong></span>  \r\n   <span data-contrast=\"auto\">, residente e domiciliado em  \r\n-  <strong style=\"color: red;\" data-display=\"MUNICIPIO DO OUTORGANTE\" data-minuta=\"outorgante.municipio\">&lt;\"MUNICIPIO DO OUTORGANTE\"&gt;</strong>/  \r\n-  <strong style=\"color: red;\" data-display=\"UF DO OUTORGANTE\" data-minuta=\"outorgante.uf\">&lt;\"UF DO OUTORGANTE\"&gt;</strong></span>  \r\n+  <strong style=\"color: black;\" data-display=\"MUNICIPIO DO OUTORGANTE\" data-minuta-ok=\"outorgante.municipio\">BRASILIA</strong>/  \r\n+  <strong style=\"color: black;\" data-display=\"UF DO OUTORGANTE\" data-minuta-ok=\"outorgante.uf\">DF</strong></span>  \r\n   <span data-contrast=\"auto\">, com endereço comercial sito no  \r\n-  <strong style=\"color: red;\" data-display=\"ENDEREÇO DO OUTORGANTE\" data-minuta=\"outorgante.endereco\">&lt;\"ENDEREÇO DO OUTORGANTE\"&gt;</strong></span>  \r\n+  <strong style=\"color: black;\" data-display=\"ENDEREÇO DO OUTORGANTE\" data-minuta-ok=\"outorgante.endereco\">Endereço: SAUN QUADRA 5, BLOCO B, TORRE NORTE - Complemento: ED. BANCO DO BRASIL, ASA NORTE-DF,  - Bairro: A NORTE - CEP: 70040912</strong></span>  \r\n   <span data-contrast=\"auto\">. O</span>  \r\n   <span data-contrast=\"auto\">(A)</span>  \r\n   <span data-contrast=\"auto\">presente se identificou por meio dos documentos retro mencionados ora exibidos, do que dou fé. E, pelo referido OUTORGANTE, me foi dito que, por meio deste público instrumento, na melhor forma de Direito, SUBSTABELECE, com reservas de iguais poderes para si, a(o) Sr.(a.)  \r\n-  <strong style=\"color: red;\" data-display=\"NOME DO OUTORGADO\" data-minuta=\"outorgado.nome\">&lt;\"NOME DO OUTORGADO\"&gt;</strong></span>  \r\n+  <strong style=\"color: black;\" data-display=\"NOME DO OUTORGADO\" data-minuta-ok=\"outorgado.nome\">DAVIDSON DA ROCHA DE CARVALHO</strong></span>  \r\n   <span data-contrast=\"auto\">, brasileiro(a)</span>  \r\n   <span data-contrast=\"auto\">,  \r\n-  <strong style=\"color: red;\" data-display=\"ESTADO CIVIL DO OUTORGADO\" data-minuta=\"outorgado.estCivil\">&lt;\"ESTADO CIVIL DO OUTORGADO\"&gt;</strong></span>  \r\n+  <strong style=\"color: black;\" data-display=\"ESTADO CIVIL DO OUTORGADO\" data-minuta-ok=\"outorgado.estCivil\">CASADO(A)</strong></span>  \r\n   <span data-contrast=\"auto\">, bancário(a)</span>  \r\n   <span data-contrast=\"auto\">, matrícula n</span>  \r\n   <span data-contrast=\"auto\">º  \r\n-  <strong style=\"color: red;\" data-display=\"MATRICULA DO OUTORGADO\" data-minuta=\"outorgado.matricula\">&lt;\"MATRICULA DO OUTORGADO\"&gt;</strong></span>  \r\n+  <strong style=\"color: black;\" data-display=\"MATRICULA DO OUTORGADO\" data-minuta-ok=\"outorgado.matricula\">F2326178</strong></span>  \r\n   <span data-contrast=\"auto\">, portador</span>  \r\n   <span data-contrast=\"auto\">(a)</span>  \r\n   <span data-contrast=\"auto\">da cédula de identidade RG nº  \r\n-  <strong style=\"color: red;\" data-display=\"RG DO OUTORGADO\" data-minuta=\"outorgado.rg\">&lt;\"RG DO OUTORGADO\"&gt;</strong></span>  \r\n+  <strong style=\"color: black;\" data-display=\"RG DO OUTORGADO\" data-minuta-ok=\"outorgado.rg\">33 447 719 0 - SSP - SP</strong></span>  \r\n   <span data-contrast=\"auto\">, inscrito(a) no CPF/MF sob nº  \r\n-  <strong style=\"color: red;\" data-display=\"CPF DO OUTORGADO\" data-minuta=\"outorgado.cpf\">&lt;\"CPF DO OUTORGADO\"&gt;</strong></span>  \r\n+  <strong style=\"color: black;\" data-display=\"CPF DO OUTORGADO\" data-minuta-ok=\"outorgado.cpf\">30192877828</strong></span>  \r\n   <span data-contrast=\"auto\">, residente e domiciliado em  \r\n-  <strong style=\"color: red;\" data-display=\"MUNICIPIO DO OUTORGADO\" data-minuta=\"outorgado.dependencia.municipio\">&lt;\"MUNICIPIO DO OUTORGADO\"&gt;</strong>/  \r\n-  <strong style=\"color: red;\" data-display=\"UF DO OUTORGADO\" data-minuta=\"outorgado.dependencia.uf\">&lt;\"UF DO OUTORGADO\"&gt;</strong></span>  \r\n+  <strong style=\"color: black;\" data-display=\"MUNICIPIO DO OUTORGADO\" data-minuta-ok=\"outorgado.dependencia.municipio\">SAO PAULO</strong>/  \r\n+  <strong style=\"color: black;\" data-display=\"UF DO OUTORGADO\" data-minuta-ok=\"outorgado.dependencia.uf\">SP</strong></span>  \r\n   <span data-contrast=\"auto\">, com endereço comercial sito em  \r\n-  <strong style=\"color: red;\" data-display=\"ENDEREÇO DO OUTORGADO\" data-minuta=\"outorgado.dependencia.endereco\">&lt;\"ENDEREÇO DO OUTORGADO\"&gt;</strong>,</span>  \r\n+  <strong style=\"color: black;\" data-display=\"ENDEREÇO DO OUTORGADO\" data-minuta-ok=\"outorgado.dependencia.endereco\">Endereço: AVENIDA PAULISTA, 2163 - Complemento: 11 ANDAR - Bairro: B VISTA - CEP: 1311933</strong>,</span>  \r\n   <span data-contrast=\"auto\">na qualidade de Gerente Geral, os poderes que lhe(s) foram outorgados pelo  \r\n-  <strong style=\"color: red;\" data-display=\"BLOCO DE SUBSIDIARIAS\" data-minuta=\"blocoSubsidiarias\">&lt;\"BLOCO DE SUBSIDIARIAS\"&gt;</strong></span> \r\n+  <strong style=\"color: black;\" data-display=\"BLOCO DE SUBSIDIARIAS\" data-minuta-ok=\"blocoSubsidiarias\">BB ADMINISTRADORA DE CONSÓRCIOS S.A., nos termos da procuração lavrada CARTÓRIO DO 5º OFÍCIO DE NOTAS DE TAGUATINGA-DF, à(s) folha(s) nº 039 e 040, do(s) livro(s) nº 3087, em 2021-02-25, e pela Subsidiária BB ADMINISTRADORA DE CARTÕES DE CRÉDITO S.A., nos termos da procuração lavrada CARTÓRIO DO 5º OFÍCIO DE NOTAS DE TAGUATINGA-DF, à(s) folha(s) nº 167, do(s) livro(s) nº 3345, em 2021-02-05, e pela Subsidiária BANCO DO BRASIL S.A., com exceção daqueles descritos na alínea \"14.a\" e observadas as alíneas \"9\", \"13\", \"14.b\", \"14.c\" e \"14.d\", nos termos da procuração lavrada CARTÓRIO DO 3º OFÍCIO DE NOTAS E PROTESTO DE TÍTULOS DE BRASÍLIA, à(s) folha(s) nº 42, do(s) livro(s) nº 42, em 2022-08-23</strong></span> \r\n   <span data-contrast=\"auto\"> para, em nome do Banco e das Subsidiárias, acolher citações judiciais, cumprir mandados judiciais, represent</span> \r\n   <span data-contrast=\"auto\">á</span> \r\n   <span data-contrast=\"auto\">-lo(s) em juízo, firmar contratos de adesão a produtos e serviços, bem como assinar contratos de empréstimos e financiamentos. O(s) substabelecimento(s) acima previsto(s) será(ã) exercido(s) pelo OUTORGADO, nas seguintes condições:</span> \r\n   <span data-ccp-props=\"{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}\"> </span></p>\r\n@@ -77,10 +77,10 @@\n   <span data-contrast=\"auto\">o substabelecimento acima previsto será exercido pelo outorgado, para prestação de fiança bancária, em conjunto com um representante do Comitê de Crédito vinculado à mesma agência, observado o limite de R$ 50.000,00 por fiança.</span>  \r\n   <strong> \r\n   <span data-contrast=\"auto\">O presente SUBSTABELECIMENTO terá validade até findar o prazo das procurações substabelecidas ou suas renovações</span></strong>  \r\n   <span data-contrast=\"auto\">, ficando ratificados por este instrumento todos os atos porventura já praticados pelo procurador acima nomeado, no limite de suas atribuições. Identificadores internos BB: minuta número \r\n-  <strong style=\"color: green;\" data-display=\"ID DA MINUTA\" data-minuta-blocked=\"idMinuta\">&lt;\"ID DA MINUTA\"&gt;</strong></span>  \r\n+  <strong style=\"color: black;\" data-display=\"ID DA MINUTA\" data-minuta-blocked-ok=\"idMinuta\">a38d8f84-a5ad-45e5-81ac-6afbc5c0ddb0</strong></span>  \r\n   <span data-contrast=\"auto\">, fluxo  \r\n-  <strong style=\"color: green;\" data-display=\"ID DO FLUXO\" data-minuta-blocked=\"tipoFluxo.idFluxo\">&lt;\"ID DO FLUXO\"&gt;</strong></span>  \r\n+  <strong style=\"color: black;\" data-display=\"ID DO FLUXO\" data-minuta-blocked-ok=\"tipoFluxo.idFluxo\">9b27efa1-99f3-4787-b6c8-ae018721c02c</strong></span>  \r\n   <span data-contrast=\"auto\">e template base  \r\n-  <strong style=\"color: green;\" data-display=\"ID DO TEMPLATE\" data-minuta-blocked=\"idTemplate\">&lt;\"ID DO TEMPLATE\"&gt;</strong></span> \r\n+  <strong style=\"color: black;\" data-display=\"ID DO TEMPLATE\" data-minuta-blocked-ok=\"idTemplate\">85b7fcb3-5153-11ed-8f01-0050568b6c10</strong></span> \r\n   <span data-contrast=\"auto\">.</span></p>\n\\ No newline at end of file\n",
+    "idTemplate": "85b7fcb3-5153-11ed-8f01-0050568b6c10"
+  },
+  "outorgado": {
+    "matricula": "F2326178"
+  },
+  "poderes": {
+    "outorganteSelecionado": {
+      "matricula": "F8718628",
+      "nome": "ROGERIO NATAL CERRI                     ",
+      "idProcuracao": null,
+      "idProxy": "2fb9cb1f-f132-4445-8605-f4c9c73e8a1e",
+      "subsidiariasSelected": [1,2]
+    }
+  }
+}
+
+###
+
+# MinutaController.getMinuta
+# exemplo não encontrado
+
+GET http://localhost:3333/procuracoes/minutas/any
+
+# retorna
+# 404 - Minuta não encontrada.
+
+###
+
+# MinutaController.getMinuta
+# slug: id
+GET http://localhost:3333/procuracoes/minutas/08368992-6859-4011-b599-b18c6329ee30
+
+# exemplo de retorno
+# {
+#   "idMinuta": "08368992-6859-4011-b599-b18c6329ee30",
+#   "idFluxo": "9b27efa1-99f3-4787-b6c8-ae018721c02c",
+#   "matriculaOutorgado": "F2326178",
+#   "outorgante_idProcuracao": null,
+#   "outorgante_idProxy": "e57fc566-ee5e-44ae-ac91-dd439f531d67",
+#   "outorgante_subsidiariasSelected": "[1,3,2]",
+#   "idTemplateBase": "85b7fcb3-5153-11ed-8f01-0050568b6c10",
+#   "idTemplateDerivado": null,
+#   "dadosMinuta_diffs": "diffs",
+#   "dadosMinuta_customData": "\"{}\"",
+#   "createdAt": "24/11/2022 14:28",
+#   "updatedAt": "24/11/2022 14:28",
+#   "ativo": 1
+# }
+
+###
+
+# MinutaController.getMinuta
+# params: prefixo OU matricula
+# exemplo usando prefixo
+GET http://localhost:3333/procuracoes/minutas?prefixo=7400
+
+# exemplo de retorno
+# array de
+# [{
+#   "idMinuta": "08368992-6859-4011-b599-b18c6329ee30",
+#   "idFluxo": "9b27efa1-99f3-4787-b6c8-ae018721c02c",
+#   "matriculaOutorgado": "F2326178",
+#   "outorgante_idProcuracao": null,
+#   "outorgante_idProxy": "e57fc566-ee5e-44ae-ac91-dd439f531d67",
+#   "outorgante_subsidiariasSelected": "[1,3,2]",
+#   "idTemplateBase": "85b7fcb3-5153-11ed-8f01-0050568b6c10",
+#   "idTemplateDerivado": null,
+#   "dadosMinuta_diffs": "diffs",
+#   "dadosMinuta_customData": "\"{}\"",
+#   "createdAt": "24/11/2022 14:28",
+#   "updatedAt": "24/11/2022 14:28",
+#   "ativo": 1
+# }]
+
+###
+
+# MinutaController.getMinuta
+# params: prefixo OU matricula
+# exemplo usando matricula
+GET http://localhost:3333/procuracoes/minutas?matricula=F2326178
+
+# exemplo de retorno
+# array de
+# [{
+#   "idMinuta": "08368992-6859-4011-b599-b18c6329ee30",
+#   "idFluxo": "9b27efa1-99f3-4787-b6c8-ae018721c02c",
+#   "matriculaOutorgado": "F2326178",
+#   "outorgante_idProcuracao": null,
+#   "outorgante_idProxy": "e57fc566-ee5e-44ae-ac91-dd439f531d67",
+#   "outorgante_subsidiariasSelected": "[1,3,2]",
+#   "idTemplateBase": "85b7fcb3-5153-11ed-8f01-0050568b6c10",
+#   "idTemplateDerivado": null,
+#   "dadosMinuta_diffs": "diffs",
+#   "dadosMinuta_customData": "\"{}\"",
+#   "createdAt": "24/11/2022 14:28",
+#   "updatedAt": "24/11/2022 14:28",
+#   "ativo": 1
+# }]
+
+###
+
+# MinutaController.getMinuta
+# params: prefixo OU matricula
+# exemplo usando nenhum
+GET http://localhost:3333/procuracoes/minutas
+
+# retorna
+# 400 - É necessário passar uma matricula ou prefixo
+
+###
+
+# MinutaController.getMinutaTemplate
+# slug: id
+GET http://localhost:3333/procuracoes/minutas/template/9b27efa1-99f3-4787-b6c8-ae018721c02c
+
+# retorna
+# {
+#   "idTemplate": "e62e9acc-5144-11ed-8f01-0050568b6c10",
+#   "idFluxo": "b8c24dd2-f715-4484-9a40-4b67ab673e95",
+#   "templateBase": "template markup",
+#   "createdAt": "20/10/2022 14:19",
+#   "ativo": 1
+# }
+
+###
+
+# MinutaController.getMinutaTemplate
+# slug: id
+# exemplo id não existente
+GET http://localhost:3333/procuracoes/minutas/template/nao-existente
+
+# retorna
+# 404 - Template não encontrado.
+
+###
+
+# MinutaController.getMinutaTemplate
+# slug: id
+# exemplo sem id
+GET http://localhost:3333/procuracoes/minutas/template
+
+# retorna
+# 400 - O id não pode ser vazio
+
+###
+
+# MinutaController.getFluxosMinuta
+# slug: id
+GET http://localhost:3333/procuracoes/minutas/fluxos/f8dd7ebd-8c5c-4f7e-92c0-4a9ac7e52ba4
+
+# exemplo de retorno
+# {
+#   "minuta": "1º Nível Gerencial UT (Superintendente UT)",
+#   "fluxo": "SUBSIDIARIA",
+#   "outorgados": {
+#     "refOrganizacional": [
+#       "1GUT"
+#     ],
+#     "prefixos": [
+#       "9009"
+#     ]
+#   },
+#   "visibilidade": [
+#     "9009"
+#   ]
+# }
+
+###
+
+# MinutaController.getFluxosMinuta
+GET http://localhost:3333/procuracoes/minutas/fluxos
+
+# exemplo de retorno
+# objeto com cada chave sendo uma minuta diferente
+# {
+#   "f8dd7ebd-8c5c-4f7e-92c0-4a9ac7e52ba4": {
+#     "minuta": "1º Nível Gerencial UT (Superintendente UT)",
+#     "fluxo": "SUBSIDIARIA",
+#     "outorgados": {
+#       "refOrganizacional": [
+#         "1GUT"
+#       ],
+#       "prefixos": [
+#         "9009"
+#       ]
+#     },
+#     "visibilidade": [
+#       "9009"
+#     ]
+#   },
+#   "9bca0a03-9b9e-454c-a6a1-b963942fc25c": {
+#     "minuta": "2º Nível Gerencial UT (Gerente de Negócios ou Administração) | Pública",
+#     "fluxo": "PUBLICA",
+#     "outorgados": {
+#       "refOrganizacional": [
+#         "2GUT"
+#       ]
+#     }
+#   },
+#   "9b27efa1-99f3-4787-b6c8-ae018721c02c": {
+#     "minuta": "2º Nível Gerencial UT (Gerente de Negócios ou Administração) | Particular",
+#     "fluxo": "PARTICULAR",
+#     "outorgados": {
+#       "refOrganizacional": [
+#         "2GUT"
+#       ]
+#     }
+#   }
+# }
+
+###
+
+# MinutaController.regenerateMinuta
+# params: id da minuta
+# exemplo com erro
+GET http://localhost:3333/procuracoes/minutas/regenerate/a08e07de-bd9e-4c4c-a4fe-475dfadd9b06
+
+# retorna
+# 400 - Minuta template usada não compatível.
+
+###
+
+# MinutaController.regenerateMinuta
+# params: id da minuta
+# exemplo não encontrado
+GET http://localhost:3333/procuracoes/minutas/regenerate/any
+
+# retorna
+# 404 - Minuta não encontrada
+
+###
+
+# MinutaController.regenerateMinuta
+# params: id da minuta
+GET http://localhost:3333/procuracoes/minutas/regenerate/9f318ce0-39e0-465f-85ae-791269d02bab
+
+# exemplo de retorno
+# {
+#   "dadosMinuta": {
+#     "customData": "{\"mock\":\"Mock-Valor\"}",
+#     "diffs": "diffs",
+#     "idFluxo": "9b27efa1-99f3-4787-b6c8-ae018721c02c",
+#     "idTemplate": "85b7fcb3-5153-11ed-8f01-0050568b6c10",
+#     "template": "template markup efetivo",
+#     "templateBase": "template markup"
+#   },
+#   "outorgado": {
+#     "matricula": "F2326178",
+#     "nome": "DAVIDSON DA ROCHA DE CARVALHO",
+#     "dataNasc": "1983-06-13T03:00:00.000Z",
+#     "dataPosse": "2007-10-01T03:00:00.000Z",
+#     "grauInstr": 7,
+#     "codFuncLotacao": "13030",
+#     "descFuncLotacao": "GER ADMINIST UT",
+#     "refOrganizacionalFuncLotacao": "2GUT",
+#     "comissao": "13030",
+#     "descCargo": "GER ADMINIST UT",
+#     "codSituacao": 100,
+#     "dataSituacao": "2007-10-01T03:00:00.000Z",
+#     "agenciaLocalizacao": "7400",
+#     "prefixoLotacao": "7400",
+#     "codUorTrabalho": "000502827",
+#     "nomeUorTrabalho": "GENAC/ADMINISTRATIVO-SP",
+#     "codUorGrupo": "000502827",
+#     "nomeUorGrupo": "GENAC/ADMINISTRATIVO",
+#     "email": "davidson@bb.com.br",
+#     "dddCelular": 11,
+#     "foneCelular": 980651676,
+#     "sexo": 1,
+#     "estCivil": "CASADO(A)",
+#     "nomeGuerra": "DAVIDSON",
+#     "rg": "33 447 719 0 - SSP - SP",
+#     "cpf": "30192877828",
+#     "dependencia": {
+#       "subordinada": "00",
+#       "uor": "000351113",
+#       "gerev": "0000",
+#       "super": "7400",
+#       "diretoria": "8595",
+#       "nome": "GENAC ATACADO",
+#       "prefixo": "7400",
+#       "uf": "SP",
+#       "municipio": "SAO PAULO",
+#       "endereco": "Endereço: AVENIDA PAULISTA, 2163 - Complemento: 11 ANDAR - Bairro: B VISTA - CEP: 1311933"
+#     }
+#   },
+#   "poderes": {
+#     "outorgantes": [
+#       {
+#         "idProcuracao": null,
+#         "idProxy": "2fb9cb1f-f132-4445-8605-f4c9c73e8a1e",
+#         "procuracao": [
+#           {
+#             "procuracaoAgregada": null,
+#             "outorgado": {
+#               "matricula": "F8718628",
+#               "nome": "ROGERIO NATAL CERRI",
+#               "cargo": "SUPERINTENDENTE UT",
+#               "prefixo": "9009",
+#               "cpf": "21449814859",
+#               "rg": "29135015X - SSP - SP",
+#               "estadoCivil": "CASADO(A)",
+#               "municipio": "BRASILIA",
+#               "uf": "DF",
+#               "endereco": "endereço"
+#             },
+#             "subsidiarias": [
+#               {
+#                 "id": 3,
+#                 "nome": "BB CONSÓRCIOS",
+#                 "nome_completo": "BB ADMINISTRADORA DE CONSÓRCIOS S.A.",
+#                 "cnpj": "06.043.050/0001-32",
+#                 "subAtivo": 1,
+#                 "procuracaoId": 2,
+#                 "procuracaoAtiva": 1,
+#                 "emissao": "2021-02-25",
+#                 "vencimento": "2023-12-10",
+#                 "manifesto": "2022-11-07",
+#                 "folha": "039 e 040",
+#                 "livro": "3087",
+#                 "doc": "https://desenv01adm.intranet.bb.com.br/server-api-procuracao//procuracoes/cadastro/download-arquivo/59440782-85dc-47b9-96d6-b2b9644d1415.pdf",
+#                 "cartorio": "CARTÓRIO DO 5º OFÍCIO DE NOTAS DE TAGUATINGA-DF"
+#               },
+#               {
+#                 "id": 2,
+#                 "nome": "BB CARTÕES",
+#                 "nome_completo": "BB ADMINISTRADORA DE CARTÕES DE CRÉDITO S.A.",
+#                 "cnpj": "31.591.399/0001-56",
+#                 "subAtivo": 1,
+#                 "procuracaoId": 4,
+#                 "procuracaoAtiva": 1,
+#                 "emissao": "2021-02-05",
+#                 "vencimento": "2023-02-07",
+#                 "manifesto": "2022-11-07",
+#                 "folha": "167",
+#                 "livro": "3345",
+#                 "doc": "https://desenv01adm.intranet.bb.com.br/server-api-procuracao//procuracoes/cadastro/download-arquivo/340404e2-d31d-44ab-b630-4d1b302da66a.pdf",
+#                 "cartorio": "CARTÓRIO DO 5º OFÍCIO DE NOTAS DE TAGUATINGA-DF"
+#               },
+#               {
+#                 "id": 1,
+#                 "nome": "BB",
+#                 "nome_completo": "BANCO DO BRASIL S.A.",
+#                 "cnpj": "00.000.000/0001-91",
+#                 "subAtivo": 1,
+#                 "procuracaoId": 13,
+#                 "procuracaoAtiva": 1,
+#                 "emissao": "2022-08-23",
+#                 "vencimento": "2022-09-02",
+#                 "manifesto": "2022-08-22",
+#                 "folha": "42",
+#                 "livro": "42",
+#                 "doc": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+#                 "cartorio": "CARTÓRIO DO 3º OFÍCIO DE NOTAS E PROTESTO DE TÍTULOS DE BRASÍLIA"
+#               }
+#             ]
+#           }
+#         ]
+#       }
+#     ],
+#     "outorganteSelecionado": {
+#       "idProcuracao": null,
+#       "idProxy": "2fb9cb1f-f132-4445-8605-f4c9c73e8a1e",
+#       "matricula": "F8718628",
+#       "nome": "ROGERIO NATAL CERRI",
+#       "subsidiariasSelected": [
+#         1,
+#         2
+#       ]
+#     }
+#   },
+#   "tipoFluxo": {
+#     "minuta": "2º Nível Gerencial UT (Gerente de Negócios ou Administração) | Particular",
+#     "fluxo": "PARTICULAR",
+#     "outorgados": {
+#       "refOrganizacional": [
+#         "2GUT"
+#       ]
+#     },
+#     "idFluxo": "9b27efa1-99f3-4787-b6c8-ae018721c02c"
+#   },
+#   "minutaCadastrada": {
+#     "idMinuta": "9f318ce0-39e0-465f-85ae-791269d02bab",
+#     "idFluxo": "9b27efa1-99f3-4787-b6c8-ae018721c02c",
+#     "matriculaOutorgado": "F2326178",
+#     "outorgante_idProcuracao": null,
+#     "outorgante_idProxy": "2fb9cb1f-f132-4445-8605-f4c9c73e8a1e",
+#     "outorgante_subsidiariasSelected": "[1,2]",
+#     "idTemplateBase": "85b7fcb3-5153-11ed-8f01-0050568b6c10",
+#     "idTemplateDerivado": null,
+#     "dadosMinuta_diffs": "diffs",
+#     "dadosMinuta_customData": "\"{\\\"mock\\\":\\\"Mock-Valor\\\"}\"",
+#     "createdAt": "28/11/2022 08:50",
+#     "updatedAt": "28/11/2022 08:50",
+#     "ativo": 1
+#   }
+# }
+
+###
+
+# MinutaController.softDeleteMinutaCadastrada
+# params: id da minuta
+# exemplo não encontrado
+DELETE http://localhost:3333/procuracoes/minutas/any
+
+# retorna
+# 404 - Minuta não encontrada
+
+###
+
+# MinutaController.softDeleteMinutaCadastrada
+# params: id da minuta
+# exemplo ok
+DELETE http://localhost:3333/procuracoes/minutas/08368992-6859-4011-b599-b18c6329ee30
+
+# retorna 204 (No Content)
+
+###

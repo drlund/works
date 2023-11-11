@@ -1,0 +1,242 @@
+{
+  "columns": [
+    {
+      "title": "Prefixo",
+      "dataIndex": "prefixo",
+      "key": "prefixo",
+      "width": 80
+    },
+
+    {
+      "title": "Dependência",
+      "dataIndex": "dependencia",
+      "key": "dependencia",
+      "width": 100
+    },
+
+    {
+      "title": "Pessoa Jurídica",
+      "children": [
+        {
+          "title": "GER PEQUENA EMPRESA",
+          "children": [
+            {
+              "title": "Até 10 Anos",
+              "dataIndex": "gerPeqEmpAteDezAnos",
+              "key": "gerPeqEmpAteDezAnos",
+              "width": 80
+            },
+            {
+              "title": "De 10 a 20 Anos",
+              "dataIndex": "gerPeqEmpDeDezaVinteAnos",
+              "key": "gerPeqEmpDeDezaVinteAnos",
+              "width": 80
+            },
+            {
+              "title": "Acima de 20 Anos",
+              "dataIndex": "gerPeqEmpAcimaDe20Anos",
+              "key": "gerPeqEmpAcimaDe20Anos",
+              "width": 80
+            }
+          ]
+        },
+        {
+          "title": "GER EMPRESA",
+          "children": [
+            {
+              "title": "Até 10 Anos",
+              "dataIndex": "gerEmpAteDezAnos",
+              "key": "gerEmpAteDezAnos",
+              "width": 80
+            },
+            {
+              "title": "De 10 a 20 Anos",
+              "dataIndex": "gerEmpDeDezaVinteAnos",
+              "key": "gerEmpDeDezaVinteAnos",
+              "width": 80
+            },
+            {
+              "title": "Acima de 20 Anos",
+              "dataIndex": "gerEmpAcimaDe20Anos",
+              "key": "gerEmpAcimaDe20Anos",
+              "width": 80
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "title": "Pessoa Fisica",
+      "children": [
+        {
+          "title": "GER ESTILO FLUXO",
+          "children": [
+            {
+              "title": "Até 10 Anos",
+              "dataIndex": "gerEstFluAteDezAnos",
+              "key": "gerEstFluAteDezAnos",
+              "width": 80
+            },
+            {
+              "title": "De 10 a 20 Anos",
+              "dataIndex": "gerEstFluDeDezaVinteAnos",
+              "key": "gerEstFluDeDezaVinteAnos",
+              "width": 80
+            },
+            {
+              "title": "Acima de 20 Anos",
+              "dataIndex": "gerEstFluAcimaDe20Anos",
+              "key": "gerEstFluAcimaDe20Anos",
+              "width": 80
+            }
+          ]
+        },
+        {
+          "title": "GER ESTILO",
+          "children": [
+            {
+              "title": "Até 10 Anos",
+              "dataIndex": "gerEstAteDezAnos",
+              "key": "gerEstAteDezAnos",
+              "width": 80
+            },
+            {
+              "title": "De 10 a 20 Anos",
+              "dataIndex": "gerEstDeDezaVinteAnos",
+              "key": "gerEstDeDezaVinteAnos",
+              "width": 80
+            },
+            {
+              "title": "Acima de 20 Anos",
+              "dataIndex": "gerEstAcimaDe20Anos",
+              "key": "gerEstAcimaDe20Anos",
+              "width": 80
+            }
+          ]
+        },
+        {
+          "title": "GER PROD RURAL",
+          "children": [
+            {
+              "title": "Até 10 Anos",
+              "dataIndex": "gerProdRurAteDezAnos",
+              "key": "gerProdRurAteDezAnos",
+              "width": 80
+            },
+            {
+              "title": "De 10 a 20 Anos",
+              "dataIndex": "gerProdRurDeDezaVinteAnos",
+              "key": "gerProdRurDeDezaVinteAnos",
+              "width": 80
+            },
+            {
+              "title": "Acima de 20 Anos",
+              "dataIndex": "gerProdRurAcimaDe20Anos",
+              "key": "gerProdRurAcimaDe20Anos",
+              "width": 80
+            }
+          ]
+        },
+        {
+          "title": "GER PERSON/EXCLUS",
+          "children": [
+            {
+              "title": "Até 10 Anos",
+              "dataIndex": "gerPersExcAteDezAnos",
+              "key": "gerPersExcAteDezAnos",
+              "width": 80
+            },
+            {
+              "title": "De 10 a 20 Anos",
+              "dataIndex": "gerPersExcDeDezaVinteAnos",
+              "key": "gerPersExcDeDezaVinteAnos",
+              "width": 80
+            },
+            {
+              "title": "Acima de 20 Anos",
+              "dataIndex": "gerPersExcAcimaDe20Anos",
+              "key": "gerPersExcAcimaDe20Anos",
+              "width": 80
+            }
+          ]
+        },
+        {
+          "title": "GER ATENDIMENTO",
+          "children": [
+            {
+              "title": "Até 10 Anos",
+              "dataIndex": "gerAtendAteDezAnos",
+              "key": "gerAtendAteDezAnos",
+              "width": 80
+            },
+            {
+              "title": "De 10 a 20 Anos",
+              "dataIndex": "gerAtendDeDezaVinteAnos",
+              "key": "gerAtendDeDezaVinteAnos",
+              "width": 80
+            },
+            {
+              "title": "Acima de 20 Anos",
+              "dataIndex": "gerAtendAcimaDe20Anos",
+              "key": "gerAtendAcimaDe20Anos",
+              "width": 80
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "title": "DEMAIS",
+      "children": [
+        {
+          "title": "SUPERV ATENDIMENTO",
+          "children": [
+            {
+              "title": "Até 10 Anos",
+              "dataIndex": "supAtendAteDezAnos",
+              "key": "supAtendAteDezAnos",
+              "width": 80
+            },
+            {
+              "title": "De 10 a 20 Anos",
+              "dataIndex": "supAtendDeDezaVinteAnos",
+              "key": "supAtendDeDezaVinteAnos",
+              "width": 80
+            },
+            {
+              "title": "Acima de 20 Anos",
+              "dataIndex": "supAtendAcimaDe20Anos",
+              "key": "supAtendAcimaDe20Anos",
+              "width": 80
+            }
+          ]
+        },
+        {
+          "title": "GER SERVIÇOS",
+          "children": [
+            {
+              "title": "Até 10 Anos",
+              "dataIndex": "gerServAteDezAnos",
+              "key": "gerServAteDezAnos",
+              "width": 80
+            },
+            {
+              "title": "De 10 a 20 Anos",
+              "dataIndex": "gerServDeDezaVinteAnos",
+              "key": "gerServDeDezaVinteAnos",
+              "width": 80
+            },
+            {
+              "title": "Acima de 20 Anos",
+              "dataIndex": "gerServAcimaDe20Anos",
+              "key": "gerServAcimaDe20Anos",
+              "width": 80
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

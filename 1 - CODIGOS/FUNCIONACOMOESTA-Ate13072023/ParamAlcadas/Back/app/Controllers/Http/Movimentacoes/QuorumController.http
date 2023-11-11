@@ -1,0 +1,111 @@
+###
+# .getQuorumProprio
+# params: token
+# necessário usuário estar logado (token) e ter acesso à ferramenta Movimentações["ADMINISTRAR_QUORUM_PROPRIO"]
+GET	http://localhost:3333/movimentacoes/excessoes-quorum-proprio?token=123
+
+# Retorno
+# JSON com informações do quorum do prefixo do usuario.
+# Content-Type: application/json; charset=utf-8
+# Exemplo
+# {"prefixo":"9009","quorum":"00","dtAtualizacao": "14/12/2022 06:15:16"}
+
+
+###
+# .getQuorumTodos
+# params: token
+# necessário usuário estar logado (token) e ter acesso à ferramenta Movimentações["ADMINISTRAR_QUORUM_QUALQUER"]
+GET	http://localhost:3333/movimentacoes/excessoes-quorum-todos?token=123
+
+# Retorno
+# Array de objetos com informação dos prefixos e respectivos quoruns.
+# Content-Type: application/json; charset=utf-8
+# Exemplo
+# [
+#     {"prefixo":"9009","quorum":"00","dtAtualizacao": "14/12/2022 06:15:16"},
+#     {"prefixo":"7839","quorum":"01","dtAtualizacao": "14/12/2022 06:15:16"}
+# ]
+
+
+###
+# .createQuorumProprio
+# params: token, quorum
+# necessário usuário estar logado (token) e ter acesso à ferramenta Movimentações["ADMINISTRAR_QUORUM_PROPRIO"]
+POST  http://localhost:3333/movimentacoes/excessoes-quorum-proprio?token=123
+Content-Type: application/json
+
+# Exemplo
+{"quorum":"8555"}
+
+# Retorno
+# JSON com informações do quorum criado
+# Content-Type: application/json; charset=utf-8
+# Exemplo
+# {"prefixo":"9009","quorum":"00","id": "0"}
+
+###
+# .createQuorumQualquer
+# params: token, prefixo, quorum
+# necessário usuário estar logado (token) e ter acesso à ferramenta Movimentações["ADMINISTRAR_QUORUM_QUALQUER"]
+POST  http://localhost:3333/movimentacoes/excessoes-quorum-qualquer?token=123
+Content-Type: application/json
+
+# Exemplo
+{   
+    "prefixo":7855,
+    "quorum": 5
+}
+
+# Retorno
+# JSON com informações do quorum criado
+# Content-Type: application/json; charset=utf-8
+# Exemplo
+# {"prefixo":"9009","quorum":"00","id": "0"}
+
+
+###
+# .updateQuorumProprio
+# params: token, quorum
+# necessário usuário estar logado (token) e ter acesso à ferramenta Movimentações["ADMINISTRAR_QUORUM_PROPRIO"]
+PATCH   http://localhost:3333/movimentacoes/excessoes-quorum-proprio?token=123
+Content-Type: application/json
+
+# Exemplo
+{
+    "quorum": 3
+}
+
+###
+# .updateQuorumQualquer
+# params: token, prefixo, quorum
+# necessário usuário estar logado (token) e ter acesso à ferramenta Movimentações["ADMINISTRAR_QUORUM_QUALQUER"]
+PATCH  http://localhost:3333/movimentacoes/excessoes-quorum-qualquer?token=123
+Content-Type: application/json
+
+# Exemplo
+{   
+    "prefixo":7839,
+    "quorum": 5
+}
+
+###
+# .deleteQuorumProprio
+# params: token
+# necessário usuário estar logado (token) e ter acesso à ferramenta Movimentações["ADMINISTRAR_QUORUM_PROPRIO"]
+DELETE	http://localhost:3333/movimentacoes/excessoes-quorum-proprio?token=123
+
+###
+# .deleteQuorumQualquer
+# params: token , prefixo
+# necessário usuário estar logado (token) e ter acesso à ferramenta Movimentações["ADMINISTRAR_QUORUM_QUALQUER"]
+DELETE  http://localhost:3333/movimentacoes/excessoes-quorum-qualquer?token=123
+Content-Type: application/json
+
+# Exemplo
+{
+    "prefixo": 9009
+}
+
+
+
+

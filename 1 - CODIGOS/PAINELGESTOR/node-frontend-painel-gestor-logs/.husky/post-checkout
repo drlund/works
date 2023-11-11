@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# git diff --name-only $1 $2 | grep package.json && echo "package.json changed" && npm install --package-lock=false

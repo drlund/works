@@ -1,0 +1,18 @@
+.ant-tree li .ant-tree-node-content-wrapper {
+  height: auto;
+  line-break: strict;
+  white-space: normal;
+}
+
+.ant-tree {
+  padding-right: 70px;
+}
+
+.ant-modal-body {
+  padding: 15px;
+  padding-bottom: 10px;
+}
+
+.flexbox-container {
+  position: absolute;
+}

@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "dataConsulta": "2022-05-12",
+        "idIndicador": 1,
+        "realizado": 57,
+        "orcado": 98
+    },
+    {
+        "id": 2,
+        "dataConsulta": "2022-05-12",
+        "idIndicador": 2,
+        "realizado": 92,
+        "orcado": 95
+    },
+    {
+        "id": 3,
+        "dataConsulta": "2022-05-12",
+        "idIndicador": 3,
+        "realizado": 41,
+        "orcado": 99
+    },
+    {
+        "id": 4,
+        "dataConsulta": "2022-05-12",
+        "idIndicador": 4,
+        "realizado": 39,
+        "orcado": 97
+    },
+    {
+        "id": 5,
+        "dataConsulta": "2022-05-12",
+        "idIndicador": 5,
+        "realizado": 48,
+        "orcado": 98
+    },
+    {
+        "id": 6,
+        "dataConsulta": "2022-05-12",
+        "idIndicador": 6,
+        "realizado": 98,
+        "orcado": 93
+    },
+    {
+        "id": 7,
+        "dataConsulta": "2022-05-12",
+        "idIndicador": 7,
+        "variaveis": {
+            "ACOLHIDOS": 10,
+            "ENVIADOS_1_8": 6,
+            "ENVIADOS_9_10": 3
+        }
+    }
+]

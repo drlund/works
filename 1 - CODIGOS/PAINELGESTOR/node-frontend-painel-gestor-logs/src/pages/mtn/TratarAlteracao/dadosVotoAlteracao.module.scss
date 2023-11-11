@@ -1,0 +1,7 @@
+.wrapperFunciVoto {
+  display: flex;
+  align-items: center;
+  & .wrapperNomeFunciVoto{
+    padding-left: 15px;
+  }
+}

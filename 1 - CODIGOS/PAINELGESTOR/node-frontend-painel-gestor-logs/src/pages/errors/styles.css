@@ -1,0 +1,50 @@
+.container {
+  text-align: center;
+  height: 80%;
+}
+
+.error-code {
+  margin-bottom: 24px;
+  color: #434e59;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 72px;
+}
+
+.detail-message {
+  margin-bottom: 16px;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.normal-message {
+  margin-bottom: 24px;
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 22px;
+}
+
+.normal-message-bold {
+  margin-bottom: 24px;
+  color: rgba(0, 0, 0, 0.712);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 22px;
+}
+
+.info-message {
+  color: #434e59;
+  font-size: 28px;
+  line-height: 24px;
+}
+
+.tool-name {
+  margin-bottom: 16px;
+  color: #434e59;
+  font-size: 20px;
+  line-height: 20px;
+  color: rgb(250, 4, 58);
+  font-weight: 600;
+}

@@ -1,0 +1,29 @@
+.inputContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.actionsContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.headerText {
+  margin-bottom: 5px;
+
+  label {
+    font-weight: bold;
+  }
+}
+
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+}

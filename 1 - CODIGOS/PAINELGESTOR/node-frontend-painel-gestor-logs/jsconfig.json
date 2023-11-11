@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "baseUrl": "./src",
+    "jsx": "react",
+    "lib": ["es2022"],
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "strictBindCallApply": true,
+    "alwaysStrict": true,
+    "strictFunctionTypes": true,
+    "useUnknownInCatchVariables": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": false,
+    "exactOptionalPropertyTypes": false,
+    "paths": {
+      "@test-utils": ["../test/test-utils.js"],
+      "@/*": ["./*"]
+    }
+  },
+  "exclude": ["node_modules", "coverage", "build", "dist"],
+  "typeAcquisition": {
+    "include": ["jest"]
+  }
+}

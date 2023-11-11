@@ -1,0 +1,89 @@
+###
+# .verificaAcesso
+# params: token
+# necessário usuário estar logado (token)
+GET	http://localhost:3333/painel/acesso?token=123
+
+# Retorno
+# Booleano que iforma a permissão de acesso ao app
+# Content-Type: text/plain; charset=utf-8
+# Exemplo
+# true
+
+###
+# .getSubordinadasByPrefixo
+# params: prefixo
+# necessário usuário estar logado (token)
+GET	http://localhost:3333/painel/lista-subordinadas?token=123&prefixo=9009
+
+# Retorno
+# Array com a lista de subordinadas de um prefixo, não deve retornar um array vazio pois todo prefixo tem ao menos uma subordinada.
+# Content-Type: application/json; charset=utf-8
+# Exemplo
+# [
+#     {"prefixo_subordinada":"9009","cd_subord_subordinada":"00"},
+#     {"prefixo_subordinada":"9009","cd_subord_subordinada":"01"},
+#     {"prefixo_subordinada":"9009","cd_subord_subordinada":"02"}
+# ]
+
+###
+# .indicadores
+# params: prefixo, subord
+# necessário usuário estar logado (token)
+GET http://localhost:3333/painel/indicadores/?token=123&prefixo=9009&subord=00
+
+# Retorno:
+# Mensagem de erro caso não existam indicadores; ou
+# JSON com as informações do prefixo e sua lista de indicadores
+# Obs. Mesmo que o prefixo não tenha pendências, ele pode ter indicadores cumpridos.
+# Content-Type: application/json; charset=utf-8
+# Exemplo
+# {
+#     "uor":"000456778",
+#     "prefixo":"9009",
+#     "subordinada":"00",
+#     "nome":"SUPER ADM",
+#     "pontosPrefixo":"82",
+#     "classificacao":{
+#         "br":"25 / 30",
+#         "diretoria":"1 / 1",
+#         "super":"null / null",
+#         "gerev":"null / null"
+#     },
+#     "indicadores":[
+#         {
+#             "idIndicador":1,
+#             "nomeIndicador":"Guarda Centralizada",
+#             "participacao":"0,00%",
+#             "pesoIndicador":"0.00",
+#             "pontosIndicador":"7,00",
+#             "maxPontosIndicador":"100,00",
+#             "atingimento":"7,00",
+#             "media":"6,77",
+#             "destaque":1,
+#             "dataAtualizacao":"13/09/2022 12:38:06",
+#             "infoCalculo":"a definir",
+#             "relatorio":"https://portaldarede.intranet.bb.com.br/relatorios/2942",
+#             "materialApoio":"https://super.intranet.bb.com.br",
+#             "grafEvolucao":"em breve nas pistas",
+#             "componentes":[
+#                 {
+#                     "idCriticidade":1,
+#                     "descricaoCriticidade":"Crítico",
+#                     "nomeCor":"Vermelho",
+#                     "cor":"#FF0000",
+#                     "detalhe":[
+#                         {
+#                             "nomeComponente":"Pendentes > 10 dias",
+#                             "valorComponente":"236315",
+#                             "pontosComponente":"7,00",
+#                             "percAtingComponente":"94",
+#                             "maxPontosComponente":"100,00",
+#                             "posicaoComponente":"07/06/2022 12:54:25"
+#                         }
+#                     ]
+#                 }
+#             ]
+#         }
+#     ]
+# }
